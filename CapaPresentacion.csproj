@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C79C6F84-D58F-40BB-89C8-9BBFFDD52A45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoTaller2Definitivo</RootNamespace>
+    <AssemblyName>ProyectoTaller2Definitivo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\Validaciones.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Administrador\Productos\ListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Productos\ListaProductos.Designer.cs">
+      <DependentUpon>ListaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Productos\altaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Productos\altaProducto.Designer.cs">
+      <DependentUpon>altaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Reportes\frmDetalleCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Reportes\frmDetalleCompras.Designer.cs">
+      <DependentUpon>frmDetalleCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Reportes\frmDetalleVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Reportes\frmDetalleVentas.Designer.cs">
+      <DependentUpon>frmDetalleVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Usuarios\frmAltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Usuarios\frmAltaUsuario.Designer.cs">
+      <DependentUpon>frmAltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Usuarios\frmDetalleUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\Usuarios\frmDetalleUsuario.Designer.cs">
+      <DependentUpon>frmDetalleUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\vistaAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\vistaAdministrador.Designer.cs">
+      <DependentUpon>vistaAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Login\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Login\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmDetalleInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmDetalleInventario.Designer.cs">
+      <DependentUpon>frmDetalleInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmVistaRepositor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmVistaRepositor.Designer.cs">
+      <DependentUpon>frmVistaRepositor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmVerVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmVerVentas.Designer.cs">
+      <DependentUpon>frmVerVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmRegistrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmRegistrarVenta.Designer.cs">
+      <DependentUpon>frmRegistrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmVistaVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmVistaVendedor.Designer.cs">
+      <DependentUpon>frmVistaVendedor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vistas\Administrador\Productos\ListaProductos.resx">
+      <DependentUpon>ListaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Administrador\Productos\altaProducto.resx">
+      <DependentUpon>altaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Administrador\Reportes\frmDetalleCompras.resx">
+      <DependentUpon>frmDetalleCompras.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Administrador\Reportes\frmDetalleVentas.resx">
+      <DependentUpon>frmDetalleVentas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Administrador\Usuarios\frmAltaUsuario.resx">
+      <DependentUpon>frmAltaUsuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Administrador\Usuarios\frmDetalleUsuario.resx">
+      <DependentUpon>frmDetalleUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Administrador\vistaAdministrador.resx">
+      <DependentUpon>vistaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Login\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repositor\frmVistaRepositor.resx">
+      <DependentUpon>frmVistaRepositor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\frmVerVentas.resx">
+      <DependentUpon>frmVerVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\frmRegistrarVenta.resx">
+      <DependentUpon>frmRegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\frmVistaVendedor.resx">
+      <DependentUpon>frmVistaVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{5bb7731c-f84f-4056-a9ba-0dfd8c2e72b6}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
