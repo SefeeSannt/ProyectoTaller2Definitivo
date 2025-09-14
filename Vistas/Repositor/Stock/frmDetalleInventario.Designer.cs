@@ -187,11 +187,11 @@
             this.cantidad,
             this.subtotal});
             this.dgvRegistroCompraRepositor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvRegistroCompraRepositor.Location = new System.Drawing.Point(0, 297);
+            this.dgvRegistroCompraRepositor.Location = new System.Drawing.Point(0, 288);
             this.dgvRegistroCompraRepositor.Name = "dgvRegistroCompraRepositor";
             this.dgvRegistroCompraRepositor.ReadOnly = true;
             this.dgvRegistroCompraRepositor.RowHeadersVisible = false;
-            this.dgvRegistroCompraRepositor.Size = new System.Drawing.Size(508, 153);
+            this.dgvRegistroCompraRepositor.Size = new System.Drawing.Size(508, 250);
             this.dgvRegistroCompraRepositor.TabIndex = 35;
             // 
             // codProducto
@@ -236,7 +236,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(508, 450);
+            this.ClientSize = new System.Drawing.Size(508, 538);
             this.Controls.Add(this.dgvRegistroCompraRepositor);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox2);

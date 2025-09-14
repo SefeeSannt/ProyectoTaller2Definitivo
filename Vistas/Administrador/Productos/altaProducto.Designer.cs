@@ -52,13 +52,13 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.txtPrecioVentaProd = new System.Windows.Forms.TextBox();
             this.txtNombreProd = new System.Windows.Forms.TextBox();
             this.cboCategoriaProd = new System.Windows.Forms.ComboBox();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.lblRegistrarProducto = new System.Windows.Forms.Label();
             this.errIngresoDatos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtCosto = new System.Windows.Forms.TextBox();
+            this.txtDescripcionProd = new System.Windows.Forms.TextBox();
+            this.txtCostoProd = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrarProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errIngresoDatos)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +81,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.lblTituloListaProd.ForeColor = System.Drawing.Color.White;
             this.lblTituloListaProd.Location = new System.Drawing.Point(213, 0);
             this.lblTituloListaProd.Name = "lblTituloListaProd";
-            this.lblTituloListaProd.Size = new System.Drawing.Size(609, 42);
+            this.lblTituloListaProd.Size = new System.Drawing.Size(747, 42);
             this.lblTituloListaProd.TabIndex = 26;
             this.lblTituloListaProd.Text = "Lista de Productos";
             this.lblTituloListaProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,7 +115,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvRegistrarProducto.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRegistrarProducto.RowTemplate.Height = 28;
-            this.dgvRegistrarProducto.Size = new System.Drawing.Size(609, 440);
+            this.dgvRegistrarProducto.Size = new System.Drawing.Size(747, 493);
             this.dgvRegistrarProducto.TabIndex = 25;
             // 
             // nombreProducto
@@ -150,7 +150,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.lblRegistroProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblRegistroProducto.Location = new System.Drawing.Point(0, 0);
             this.lblRegistroProducto.Name = "lblRegistroProducto";
-            this.lblRegistroProducto.Size = new System.Drawing.Size(214, 485);
+            this.lblRegistroProducto.Size = new System.Drawing.Size(214, 538);
             this.lblRegistroProducto.TabIndex = 24;
             // 
             // lblNombreProducto
@@ -225,6 +225,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.txtStockProd.Name = "txtStockProd";
             this.txtStockProd.Size = new System.Drawing.Size(190, 20);
             this.txtStockProd.TabIndex = 34;
+            this.txtStockProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyInteger_KeyPress);
             // 
             // txtPrecioVentaProd
             // 
@@ -232,6 +233,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.txtPrecioVentaProd.Name = "txtPrecioVentaProd";
             this.txtPrecioVentaProd.Size = new System.Drawing.Size(190, 20);
             this.txtPrecioVentaProd.TabIndex = 35;
+            this.txtPrecioVentaProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumbers_KeyPress);
             // 
             // txtNombreProd
             // 
@@ -243,30 +245,34 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             // cboCategoriaProd
             // 
             this.cboCategoriaProd.FormattingEnabled = true;
+            this.cboCategoriaProd.Items.AddRange(new object[] {
+            "Pesas"});
             this.cboCategoriaProd.Location = new System.Drawing.Point(10, 110);
             this.cboCategoriaProd.Name = "cboCategoriaProd";
             this.cboCategoriaProd.Size = new System.Drawing.Size(190, 21);
             this.cboCategoriaProd.TabIndex = 39;
+            this.cboCategoriaProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noWrite_KeyPress);
             // 
-            // btnCancelar
+            // btnLimpiar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Red;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnCancelar.IconColor = System.Drawing.Color.Black;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.IconSize = 16;
-            this.btnCancelar.Location = new System.Drawing.Point(11, 401);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(189, 37);
-            this.btnCancelar.TabIndex = 42;
-            this.btnCancelar.Text = "Limpiar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.BackColor = System.Drawing.Color.Red;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiar.IconSize = 16;
+            this.btnLimpiar.Location = new System.Drawing.Point(11, 401);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(189, 37);
+            this.btnLimpiar.TabIndex = 42;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
@@ -279,7 +285,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.btnGuardar.IconColor = System.Drawing.Color.Black;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 16;
-            this.btnGuardar.Location = new System.Drawing.Point(10, 358);
+            this.btnGuardar.Location = new System.Drawing.Point(11, 358);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(189, 37);
             this.btnGuardar.TabIndex = 40;
@@ -287,6 +293,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblRegistrarProducto
             // 
@@ -303,39 +310,52 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             // 
             this.errIngresoDatos.ContainerControl = this;
             // 
-            // btnSalir
+            // txtDescripcionProd
             // 
-            this.btnSalir.Location = new System.Drawing.Point(748, 436);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(64, 20);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.txtDescripcionProd.Location = new System.Drawing.Point(10, 150);
+            this.txtDescripcionProd.Name = "txtDescripcionProd";
+            this.txtDescripcionProd.Size = new System.Drawing.Size(189, 20);
+            this.txtDescripcionProd.TabIndex = 44;
             // 
-            // txtDescripcion
+            // txtCostoProd
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(10, 150);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(189, 20);
-            this.txtDescripcion.TabIndex = 44;
+            this.txtCostoProd.Location = new System.Drawing.Point(10, 227);
+            this.txtCostoProd.Name = "txtCostoProd";
+            this.txtCostoProd.Size = new System.Drawing.Size(189, 20);
+            this.txtCostoProd.TabIndex = 45;
+            this.txtCostoProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumbers_KeyPress);
             // 
-            // txtCosto
+            // btnCancelar
             // 
-            this.txtCosto.Location = new System.Drawing.Point(10, 227);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(189, 20);
-            this.txtCosto.TabIndex = 45;
+            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.btnCancelar.IconColor = System.Drawing.Color.Black;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 16;
+            this.btnCancelar.Location = new System.Drawing.Point(11, 444);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(189, 37);
+            this.btnCancelar.TabIndex = 46;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmAltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 485);
-            this.Controls.Add(this.txtCosto);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.lblRegistrarProducto);
+            this.ClientSize = new System.Drawing.Size(960, 538);
             this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.txtCostoProd);
+            this.Controls.Add(this.txtDescripcionProd);
+            this.Controls.Add(this.lblRegistrarProducto);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cboCategoriaProd);
             this.Controls.Add(this.txtNombreProd);
@@ -375,11 +395,9 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
         private Label lblStock;
         private TextBox txtStockProd;
         private TextBox txtPrecioVentaProd;
-        private TextBox txtCostoProd;
-        private TextBox txtDescripcionProd;
         private TextBox txtNombreProd;
         private ComboBox cboCategoriaProd;
-        private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private Label lblRegistrarProducto;
         private DataGridViewTextBoxColumn nombreProducto;
@@ -387,8 +405,8 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
         private DataGridViewTextBoxColumn colCosto;
         private DataGridViewTextBoxColumn precioVenta;
         private ErrorProvider errIngresoDatos;
-        private Button btnSalir;
-        private TextBox txtCosto;
-        private TextBox txtDescripcion;
+        private TextBox txtCostoProd;
+        private TextBox txtDescripcionProd;
+        private FontAwesome.Sharp.IconButton btnCancelar;
     }
 }

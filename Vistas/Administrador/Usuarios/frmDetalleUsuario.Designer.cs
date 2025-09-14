@@ -62,10 +62,10 @@
             this.telefono,
             this.rol,
             this.estado});
-            this.dgvDetalleUsuario.Location = new System.Drawing.Point(32, 134);
+            this.dgvDetalleUsuario.Location = new System.Drawing.Point(12, 134);
             this.dgvDetalleUsuario.Name = "dgvDetalleUsuario";
             this.dgvDetalleUsuario.RowHeadersVisible = false;
-            this.dgvDetalleUsuario.Size = new System.Drawing.Size(737, 255);
+            this.dgvDetalleUsuario.Size = new System.Drawing.Size(936, 365);
             this.dgvDetalleUsuario.TabIndex = 0;
             // 
             // numDocumento
@@ -117,7 +117,7 @@
             // 
             this.lblUsuariosReegistrados.AutoSize = true;
             this.lblUsuariosReegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuariosReegistrados.Location = new System.Drawing.Point(27, 24);
+            this.lblUsuariosReegistrados.Location = new System.Drawing.Point(12, 9);
             this.lblUsuariosReegistrados.Name = "lblUsuariosReegistrados";
             this.lblUsuariosReegistrados.Size = new System.Drawing.Size(202, 26);
             this.lblUsuariosReegistrados.TabIndex = 3;
@@ -182,7 +182,7 @@
             // 
             this.lblUsuariosRegistrados.AutoSize = true;
             this.lblUsuariosRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuariosRegistrados.Location = new System.Drawing.Point(29, 401);
+            this.lblUsuariosRegistrados.Location = new System.Drawing.Point(9, 512);
             this.lblUsuariosRegistrados.Name = "lblUsuariosRegistrados";
             this.lblUsuariosRegistrados.Size = new System.Drawing.Size(170, 17);
             this.lblUsuariosRegistrados.TabIndex = 11;
@@ -192,7 +192,7 @@
             // 
             this.lblTotalUsuariosRegistrados.AutoSize = true;
             this.lblTotalUsuariosRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalUsuariosRegistrados.Location = new System.Drawing.Point(205, 401);
+            this.lblTotalUsuariosRegistrados.Location = new System.Drawing.Point(185, 512);
             this.lblTotalUsuariosRegistrados.Name = "lblTotalUsuariosRegistrados";
             this.lblTotalUsuariosRegistrados.Size = new System.Drawing.Size(16, 17);
             this.lblTotalUsuariosRegistrados.TabIndex = 12;
@@ -203,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 442);
+            this.ClientSize = new System.Drawing.Size(960, 538);
             this.Controls.Add(this.lblTotalUsuariosRegistrados);
             this.Controls.Add(this.lblUsuariosRegistrados);
             this.Controls.Add(this.cbFiltrarEstado);

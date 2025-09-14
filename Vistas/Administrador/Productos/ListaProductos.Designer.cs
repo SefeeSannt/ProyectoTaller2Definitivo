@@ -55,7 +55,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             // 
             this.lblTotalProductosRegistrados.AutoSize = true;
             this.lblTotalProductosRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalProductosRegistrados.Location = new System.Drawing.Point(185, 382);
+            this.lblTotalProductosRegistrados.Location = new System.Drawing.Point(185, 512);
             this.lblTotalProductosRegistrados.Name = "lblTotalProductosRegistrados";
             this.lblTotalProductosRegistrados.Size = new System.Drawing.Size(16, 17);
             this.lblTotalProductosRegistrados.TabIndex = 32;
@@ -65,7 +65,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             // 
             this.lblProductosRegistrados.AutoSize = true;
             this.lblProductosRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductosRegistrados.Location = new System.Drawing.Point(9, 382);
+            this.lblProductosRegistrados.Location = new System.Drawing.Point(9, 512);
             this.lblProductosRegistrados.Name = "lblProductosRegistrados";
             this.lblProductosRegistrados.Size = new System.Drawing.Size(170, 17);
             this.lblProductosRegistrados.TabIndex = 31;
@@ -148,7 +148,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.dgvListaProductos.Location = new System.Drawing.Point(12, 115);
             this.dgvListaProductos.Name = "dgvListaProductos";
             this.dgvListaProductos.RowHeadersVisible = false;
-            this.dgvListaProductos.Size = new System.Drawing.Size(737, 255);
+            this.dgvListaProductos.Size = new System.Drawing.Size(936, 384);
             this.dgvListaProductos.TabIndex = 24;
             // 
             // nombreProducto
@@ -186,7 +186,7 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(767, 450);
+            this.ClientSize = new System.Drawing.Size(960, 538);
             this.Controls.Add(this.lblTotalProductosRegistrados);
             this.Controls.Add(this.lblProductosRegistrados);
             this.Controls.Add(this.cbFiltrarEstadoProducto);

@@ -57,7 +57,7 @@
             this.btnVender.FlatAppearance.BorderSize = 0;
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(299, 406);
+            this.btnVender.Location = new System.Drawing.Point(295, 480);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(131, 46);
             this.btnVender.TabIndex = 31;
@@ -89,7 +89,7 @@
             this.dgvListaFactura.Name = "dgvListaFactura";
             this.dgvListaFactura.ReadOnly = true;
             this.dgvListaFactura.RowHeadersVisible = false;
-            this.dgvListaFactura.Size = new System.Drawing.Size(411, 150);
+            this.dgvListaFactura.Size = new System.Drawing.Size(411, 251);
             this.dgvListaFactura.TabIndex = 29;
             // 
             // codigo
@@ -147,7 +147,7 @@
             this.txtEfectivo.BackColor = System.Drawing.Color.Gray;
             this.txtEfectivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEfectivo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEfectivo.Location = new System.Drawing.Point(123, 355);
+            this.txtEfectivo.Location = new System.Drawing.Point(139, 448);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(144, 26);
             this.txtEfectivo.TabIndex = 26;
@@ -206,7 +206,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(12, 335);
+            this.lblTotal.Location = new System.Drawing.Point(28, 428);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(99, 17);
             this.lblTotal.TabIndex = 20;
@@ -216,7 +216,7 @@
             // 
             this.lblEfectivo.AutoSize = true;
             this.lblEfectivo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEfectivo.Location = new System.Drawing.Point(162, 335);
+            this.lblEfectivo.Location = new System.Drawing.Point(178, 428);
             this.lblEfectivo.Name = "lblEfectivo";
             this.lblEfectivo.Size = new System.Drawing.Size(64, 17);
             this.lblEfectivo.TabIndex = 19;
@@ -226,7 +226,7 @@
             // 
             this.lblDevolucion.AutoSize = true;
             this.lblDevolucion.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDevolucion.Location = new System.Drawing.Point(271, 335);
+            this.lblDevolucion.Location = new System.Drawing.Point(287, 428);
             this.lblDevolucion.Name = "lblDevolucion";
             this.lblDevolucion.Size = new System.Drawing.Size(83, 17);
             this.lblDevolucion.TabIndex = 18;
@@ -257,7 +257,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(438, 464);
+            this.ClientSize = new System.Drawing.Size(438, 538);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.dgvListaFactura);

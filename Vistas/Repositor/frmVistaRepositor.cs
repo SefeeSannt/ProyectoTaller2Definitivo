@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.Helpers;
 
 namespace ProyectoTaller2Definitivo.Vistas.Repositor
 {
@@ -18,8 +19,6 @@ namespace ProyectoTaller2Definitivo.Vistas.Repositor
         {
             InitializeComponent();
         }
-
-       
 
         private void tsmiRegistrarCompra_Click(object sender, EventArgs e)
         {

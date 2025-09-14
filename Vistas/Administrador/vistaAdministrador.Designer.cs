@@ -94,7 +94,7 @@ namespace CapaPresentacion.Vistas.Administrador
             this.iconBtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnSalir.IconSize = 35;
             this.iconBtnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconBtnSalir.Location = new System.Drawing.Point(867, 12);
+            this.iconBtnSalir.Location = new System.Drawing.Point(864, 14);
             this.iconBtnSalir.Name = "iconBtnSalir";
             this.iconBtnSalir.Size = new System.Drawing.Size(93, 41);
             this.iconBtnSalir.TabIndex = 14;

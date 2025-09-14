@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblConsultaProveedores = new System.Windows.Forms.Label();
             this.lblDocumentoProveedor = new System.Windows.Forms.Label();
             this.lblRubro = new System.Windows.Forms.Label();
             this.lblNombreProveedor = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cboRubro = new System.Windows.Forms.ComboBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.iconBtnBuscarProv = new FontAwesome.Sharp.IconButton();
             this.dgvConsultaProveedores = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +43,11 @@
             this.rubro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
+            this.errIngresoDatos = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaProveedores)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errIngresoDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblConsultaProveedores
@@ -91,27 +94,27 @@
             this.lblNombreProveedor.TabIndex = 2;
             this.lblNombreProveedor.Text = "Proveedor";
             // 
-            // comboBox1
+            // cboRubro
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(183, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cboRubro.FormattingEnabled = true;
+            this.cboRubro.Location = new System.Drawing.Point(183, 134);
+            this.cboRubro.Name = "cboRubro";
+            this.cboRubro.Size = new System.Drawing.Size(155, 21);
+            this.cboRubro.TabIndex = 4;
             // 
-            // textBox1
+            // txtDocumento
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtDocumento.Location = new System.Drawing.Point(14, 134);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(142, 20);
+            this.txtDocumento.TabIndex = 5;
             // 
-            // textBox2
+            // txtProveedor
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtProveedor.Location = new System.Drawing.Point(12, 91);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.Size = new System.Drawing.Size(326, 20);
+            this.txtProveedor.TabIndex = 6;
             // 
             // iconBtnBuscarProv
             // 
@@ -121,7 +124,7 @@
             this.iconBtnBuscarProv.IconColor = System.Drawing.Color.Black;
             this.iconBtnBuscarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnBuscarProv.IconSize = 15;
-            this.iconBtnBuscarProv.Location = new System.Drawing.Point(344, 82);
+            this.iconBtnBuscarProv.Location = new System.Drawing.Point(360, 86);
             this.iconBtnBuscarProv.Name = "iconBtnBuscarProv";
             this.iconBtnBuscarProv.Size = new System.Drawing.Size(106, 29);
             this.iconBtnBuscarProv.TabIndex = 7;
@@ -144,7 +147,7 @@
             this.dgvConsultaProveedores.Location = new System.Drawing.Point(12, 194);
             this.dgvConsultaProveedores.Name = "dgvConsultaProveedores";
             this.dgvConsultaProveedores.RowHeadersVisible = false;
-            this.dgvConsultaProveedores.Size = new System.Drawing.Size(469, 244);
+            this.dgvConsultaProveedores.Size = new System.Drawing.Size(469, 332);
             this.dgvConsultaProveedores.TabIndex = 8;
             // 
             // nombre
@@ -170,12 +173,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.lblNombreProveedor);
             this.panel1.Controls.Add(this.iconBtnBuscarProv);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtProveedor);
+            this.panel1.Controls.Add(this.cboRubro);
+            this.panel1.Controls.Add(this.txtDocumento);
             this.panel1.Controls.Add(this.lblRubro);
             this.panel1.Controls.Add(this.lblDocumentoProveedor);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -183,28 +186,33 @@
             this.panel1.Size = new System.Drawing.Size(469, 176);
             this.panel1.TabIndex = 9;
             // 
-            // iconButton1
+            // btnLimpiar
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Red;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 15;
-            this.iconButton1.Location = new System.Drawing.Point(344, 117);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(106, 29);
-            this.iconButton1.TabIndex = 8;
-            this.iconButton1.Text = "Limpiar filtros";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnLimpiar.BackColor = System.Drawing.Color.Red;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiar.IconSize = 15;
+            this.btnLimpiar.Location = new System.Drawing.Point(360, 129);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(106, 29);
+            this.btnLimpiar.TabIndex = 8;
+            this.btnLimpiar.Text = "Limpiar filtros";
+            this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // errIngresoDatos
+            // 
+            this.errIngresoDatos.ContainerControl = this;
             // 
             // frmConsultaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(496, 450);
+            this.ClientSize = new System.Drawing.Size(496, 538);
             this.Controls.Add(this.dgvConsultaProveedores);
             this.Controls.Add(this.lblConsultaProveedores);
             this.Controls.Add(this.panel1);
@@ -214,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaProveedores)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errIngresoDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,9 +234,9 @@
         private System.Windows.Forms.Label lblDocumentoProveedor;
         private System.Windows.Forms.Label lblRubro;
         private System.Windows.Forms.Label lblNombreProveedor;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cboRubro;
+        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.TextBox txtProveedor;
         private FontAwesome.Sharp.IconButton iconBtnBuscarProv;
         private System.Windows.Forms.DataGridView dgvConsultaProveedores;
         private System.Windows.Forms.Panel panel1;
@@ -235,6 +244,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn rubro;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoEmail;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
+        private System.Windows.Forms.ErrorProvider errIngresoDatos;
     }
 }

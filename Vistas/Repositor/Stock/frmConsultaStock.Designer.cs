@@ -35,14 +35,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconBtnBuscar = new FontAwesome.Sharp.IconButton();
             this.dgvConsultaStock = new System.Windows.Forms.DataGridView();
-            this.iconBtnActualizarStock = new FontAwesome.Sharp.IconButton();
-            this.iconBtnCerrar = new FontAwesome.Sharp.IconButton();
-            this.iconBtnExportar = new FontAwesome.Sharp.IconButton();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockActual = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nivelMinimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iconBtnActualizarStock = new FontAwesome.Sharp.IconButton();
+            this.iconBtnCerrar = new FontAwesome.Sharp.IconButton();
+            this.iconBtnExportar = new FontAwesome.Sharp.IconButton();
             this.iconBtnGenerarPedido = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaStock)).BeginInit();
             this.SuspendLayout();
@@ -122,50 +122,8 @@
             this.dgvConsultaStock.Location = new System.Drawing.Point(-1, 134);
             this.dgvConsultaStock.Name = "dgvConsultaStock";
             this.dgvConsultaStock.RowHeadersVisible = false;
-            this.dgvConsultaStock.Size = new System.Drawing.Size(599, 235);
+            this.dgvConsultaStock.Size = new System.Drawing.Size(599, 320);
             this.dgvConsultaStock.TabIndex = 5;
-            // 
-            // iconBtnActualizarStock
-            // 
-            this.iconBtnActualizarStock.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnActualizarStock.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnActualizarStock.IconColor = System.Drawing.Color.Black;
-            this.iconBtnActualizarStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnActualizarStock.Location = new System.Drawing.Point(117, 376);
-            this.iconBtnActualizarStock.Name = "iconBtnActualizarStock";
-            this.iconBtnActualizarStock.Size = new System.Drawing.Size(185, 29);
-            this.iconBtnActualizarStock.TabIndex = 6;
-            this.iconBtnActualizarStock.Text = "Actualizar Stock";
-            this.iconBtnActualizarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnActualizarStock.UseVisualStyleBackColor = true;
-            // 
-            // iconBtnCerrar
-            // 
-            this.iconBtnCerrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnCerrar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnCerrar.IconColor = System.Drawing.Color.Black;
-            this.iconBtnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCerrar.Location = new System.Drawing.Point(319, 411);
-            this.iconBtnCerrar.Name = "iconBtnCerrar";
-            this.iconBtnCerrar.Size = new System.Drawing.Size(185, 30);
-            this.iconBtnCerrar.TabIndex = 8;
-            this.iconBtnCerrar.Text = "Cerrar";
-            this.iconBtnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnCerrar.UseVisualStyleBackColor = true;
-            // 
-            // iconBtnExportar
-            // 
-            this.iconBtnExportar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnExportar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnExportar.IconColor = System.Drawing.Color.Black;
-            this.iconBtnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnExportar.Location = new System.Drawing.Point(319, 375);
-            this.iconBtnExportar.Name = "iconBtnExportar";
-            this.iconBtnExportar.Size = new System.Drawing.Size(185, 30);
-            this.iconBtnExportar.TabIndex = 9;
-            this.iconBtnExportar.Text = "Exportar";
-            this.iconBtnExportar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnExportar.UseVisualStyleBackColor = true;
             // 
             // codigo
             // 
@@ -192,13 +150,55 @@
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
             // 
+            // iconBtnActualizarStock
+            // 
+            this.iconBtnActualizarStock.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnActualizarStock.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconBtnActualizarStock.IconColor = System.Drawing.Color.Black;
+            this.iconBtnActualizarStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnActualizarStock.Location = new System.Drawing.Point(117, 461);
+            this.iconBtnActualizarStock.Name = "iconBtnActualizarStock";
+            this.iconBtnActualizarStock.Size = new System.Drawing.Size(185, 29);
+            this.iconBtnActualizarStock.TabIndex = 6;
+            this.iconBtnActualizarStock.Text = "Actualizar Stock";
+            this.iconBtnActualizarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnActualizarStock.UseVisualStyleBackColor = true;
+            // 
+            // iconBtnCerrar
+            // 
+            this.iconBtnCerrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnCerrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconBtnCerrar.IconColor = System.Drawing.Color.Black;
+            this.iconBtnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnCerrar.Location = new System.Drawing.Point(319, 496);
+            this.iconBtnCerrar.Name = "iconBtnCerrar";
+            this.iconBtnCerrar.Size = new System.Drawing.Size(185, 30);
+            this.iconBtnCerrar.TabIndex = 8;
+            this.iconBtnCerrar.Text = "Cerrar";
+            this.iconBtnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnCerrar.UseVisualStyleBackColor = true;
+            // 
+            // iconBtnExportar
+            // 
+            this.iconBtnExportar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnExportar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconBtnExportar.IconColor = System.Drawing.Color.Black;
+            this.iconBtnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnExportar.Location = new System.Drawing.Point(319, 461);
+            this.iconBtnExportar.Name = "iconBtnExportar";
+            this.iconBtnExportar.Size = new System.Drawing.Size(185, 30);
+            this.iconBtnExportar.TabIndex = 9;
+            this.iconBtnExportar.Text = "Exportar";
+            this.iconBtnExportar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnExportar.UseVisualStyleBackColor = true;
+            // 
             // iconBtnGenerarPedido
             // 
             this.iconBtnGenerarPedido.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnGenerarPedido.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnGenerarPedido.IconColor = System.Drawing.Color.Black;
             this.iconBtnGenerarPedido.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnGenerarPedido.Location = new System.Drawing.Point(117, 411);
+            this.iconBtnGenerarPedido.Location = new System.Drawing.Point(117, 496);
             this.iconBtnGenerarPedido.Name = "iconBtnGenerarPedido";
             this.iconBtnGenerarPedido.Size = new System.Drawing.Size(185, 30);
             this.iconBtnGenerarPedido.TabIndex = 10;
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(597, 443);
+            this.ClientSize = new System.Drawing.Size(597, 538);
             this.Controls.Add(this.iconBtnGenerarPedido);
             this.Controls.Add(this.iconBtnExportar);
             this.Controls.Add(this.iconBtnCerrar);

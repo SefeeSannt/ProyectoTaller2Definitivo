@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.Helpers;
 
 namespace CapaPresentacion.Vistas.Administrador.Usuarios
 {
@@ -18,83 +19,95 @@ namespace CapaPresentacion.Vistas.Administrador.Usuarios
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void onlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Validaciones.onlyNumbers(sender, e, errIngresoDatos);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void onlyInteger_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Validaciones.onlyInteger(sender, e, errIngresoDatos);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void noWrite_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Validaciones.noWrite(sender, e);
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void onlyLetters_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Validaciones.onlyLetters(sender, e, errIngresoDatos);
         }
 
-        private void txtConfirmarClave_TextChanged(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
+            errIngresoDatos.Clear();
 
+            if (string.IsNullOrEmpty(txtDocumento.Text))
+            {
+                errIngresoDatos.SetError(txtDocumento, "Debe ingresar un documento");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtNombreCompleto.Text))
+            {
+                errIngresoDatos.SetError(txtNombreCompleto, "Debe ingresar un nombre");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtCorreo.Text))
+            {
+                errIngresoDatos.SetError(txtCorreo, "Debe ingresar un usuario");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtTelefono.Text))
+            {
+                errIngresoDatos.SetError(txtTelefono, "Debe ingresar una clave");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                errIngresoDatos.SetError(txtPassword, "Debe ingresar una clave");
+                return;
+            }
+
+            if (cboRol.SelectedIndex == -1)
+            {
+                errIngresoDatos.SetError(cboRol, "Debe ingresar una clave");
+                return;
+            }
+
+            MessageBox.Show("Usuario registrado con exito.","Registro Exitoso",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            errIngresoDatos.Clear();
 
+            var result = MessageBox.Show("¿Desea limpiar los campos?", "Limpiar Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                txtDocumento.Clear();
+                txtNombreCompleto.Clear();
+                txtCorreo.Clear();
+                txtTelefono.Clear();
+                txtPassword.Clear();
+                cboRol.SelectedIndex = -1;
+            }
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
+            errIngresoDatos.Clear();
 
+            var result = MessageBox.Show("¿Desea cancelar el registro?", "Cancelar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void cboEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //muestra el estado del ususario
-        /*
-        private void FormularioUsuario_Load(object sender, EventArgs e)
-        {
-            cboEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
-            cboEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });
-            cboEstado.DisplayMember = "Texto";
-            cboEstado.ValueMember = "Valor";
-            cboEstado.SelectedIndex = 0;
-
-        }
-        */
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

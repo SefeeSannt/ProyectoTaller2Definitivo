@@ -40,5 +40,11 @@ namespace CapaPresentacion.Helpers
                 error.SetError((Control)sender, "Solo se permiten numeros enteros");
             }
         }
+
+        public static void noWrite(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
     }
 }

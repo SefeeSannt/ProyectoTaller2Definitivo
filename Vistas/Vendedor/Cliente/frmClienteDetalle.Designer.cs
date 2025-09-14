@@ -48,7 +48,7 @@
             // 
             this.lblTotalClienteRegistrados.AutoSize = true;
             this.lblTotalClienteRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalClienteRegistrados.Location = new System.Drawing.Point(199, 385);
+            this.lblTotalClienteRegistrados.Location = new System.Drawing.Point(199, 512);
             this.lblTotalClienteRegistrados.Name = "lblTotalClienteRegistrados";
             this.lblTotalClienteRegistrados.Size = new System.Drawing.Size(16, 17);
             this.lblTotalClienteRegistrados.TabIndex = 23;
@@ -58,7 +58,7 @@
             // 
             this.lblClienteRegistrados.AutoSize = true;
             this.lblClienteRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClienteRegistrados.Location = new System.Drawing.Point(23, 385);
+            this.lblClienteRegistrados.Location = new System.Drawing.Point(23, 512);
             this.lblClienteRegistrados.Name = "lblClienteRegistrados";
             this.lblClienteRegistrados.Size = new System.Drawing.Size(170, 17);
             this.lblClienteRegistrados.TabIndex = 22;
@@ -135,10 +135,10 @@
             this.nombreCompleto,
             this.telefono,
             this.estado});
-            this.dgvDetalleCliente.Location = new System.Drawing.Point(26, 118);
+            this.dgvDetalleCliente.Location = new System.Drawing.Point(12, 110);
             this.dgvDetalleCliente.Name = "dgvDetalleCliente";
             this.dgvDetalleCliente.RowHeadersVisible = false;
-            this.dgvDetalleCliente.Size = new System.Drawing.Size(737, 255);
+            this.dgvDetalleCliente.Size = new System.Drawing.Size(952, 399);
             this.dgvDetalleCliente.TabIndex = 13;
             // 
             // numDocumento
@@ -166,7 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(960, 538);
             this.Controls.Add(this.lblTotalClienteRegistrados);
             this.Controls.Add(this.lblClienteRegistrados);
             this.Controls.Add(this.cbFiltrarEstadoCliente);

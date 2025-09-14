@@ -3,8 +3,6 @@ using CapaPresentacion.Vistas.Administrador.Productos;
 using CapaPresentacion.Vistas.Administrador.Reportes;
 using CapaPresentacion.Vistas.Administrador.Usuarios;
 using ProyectoTaller2Definitivo.Vistas.Administrador.Usuarios;
-
-
 //using CapaPresentacion.Vistas.Administrador.Usuario;
 using System;
 using System.Collections.Generic;

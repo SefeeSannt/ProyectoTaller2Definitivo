@@ -56,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 70);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(944, 52);
+            this.menuStrip1.Size = new System.Drawing.Size(960, 52);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -148,7 +148,7 @@
             this.pntCabecera.Location = new System.Drawing.Point(0, 0);
             this.pntCabecera.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pntCabecera.Name = "pntCabecera";
-            this.pntCabecera.Size = new System.Drawing.Size(944, 70);
+            this.pntCabecera.Size = new System.Drawing.Size(960, 70);
             this.pntCabecera.TabIndex = 11;
             // 
             // iconBtnSalir
@@ -213,7 +213,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(944, 621);
+            this.ClientSize = new System.Drawing.Size(960, 660);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pntCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

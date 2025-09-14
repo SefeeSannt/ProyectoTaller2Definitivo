@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.iconBtnRegistrar = new FontAwesome.Sharp.IconButton();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnRegistrar = new FontAwesome.Sharp.IconButton();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.dgvRegistroCompras = new System.Windows.Forms.DataGridView();
@@ -37,7 +38,7 @@
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnagregar = new FontAwesome.Sharp.IconButton();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.gbInfProducto = new System.Windows.Forms.GroupBox();
             this.iconBtnLupa = new FontAwesome.Sharp.IconButton();
             this.numUpDCantidad = new System.Windows.Forms.NumericUpDown();
@@ -62,47 +63,51 @@
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.errIngresoDatos = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).BeginInit();
             this.gbInfProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDCantidad)).BeginInit();
             this.gbInforProveedor.SuspendLayout();
             this.gbInfCompra.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errIngresoDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // iconBtnRegistrar
+            // btnRegistrar
             // 
-            this.iconBtnRegistrar.BackColor = System.Drawing.Color.Blue;
-            this.iconBtnRegistrar.FlatAppearance.BorderSize = 0;
-            this.iconBtnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.iconBtnRegistrar.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            this.iconBtnRegistrar.IconColor = System.Drawing.Color.White;
-            this.iconBtnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnRegistrar.IconSize = 15;
-            this.iconBtnRegistrar.Location = new System.Drawing.Point(492, 411);
-            this.iconBtnRegistrar.Name = "iconBtnRegistrar";
-            this.iconBtnRegistrar.Size = new System.Drawing.Size(132, 29);
-            this.iconBtnRegistrar.TabIndex = 20;
-            this.iconBtnRegistrar.Text = "Registrar";
-            this.iconBtnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.BackColor = System.Drawing.Color.Blue;
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.btnRegistrar.IconColor = System.Drawing.Color.White;
+            this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistrar.IconSize = 15;
+            this.btnRegistrar.Location = new System.Drawing.Point(639, 497);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(132, 29);
+            this.btnRegistrar.TabIndex = 20;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtTotalPagar
             // 
             this.txtTotalPagar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTotalPagar.Location = new System.Drawing.Point(492, 376);
+            this.txtTotalPagar.Location = new System.Drawing.Point(639, 462);
             this.txtTotalPagar.Multiline = true;
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.ReadOnly = true;
             this.txtTotalPagar.Size = new System.Drawing.Size(132, 29);
             this.txtTotalPagar.TabIndex = 16;
+            this.txtTotalPagar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noWrite_KeyPress);
             // 
             // lblTotalPagar
             // 
             this.lblTotalPagar.AutoSize = true;
             this.lblTotalPagar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPagar.Location = new System.Drawing.Point(489, 356);
+            this.lblTotalPagar.Location = new System.Drawing.Point(636, 442);
             this.lblTotalPagar.Name = "lblTotalPagar";
             this.lblTotalPagar.Size = new System.Drawing.Size(83, 17);
             this.lblTotalPagar.TabIndex = 19;
@@ -110,16 +115,17 @@
             // 
             // dgvRegistroCompras
             // 
+            this.dgvRegistroCompras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRegistroCompras.BackgroundColor = System.Drawing.Color.White;
             this.dgvRegistroCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRegistroCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRegistroCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRegistroCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistroCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.producto,
@@ -129,7 +135,7 @@
             this.dgvRegistroCompras.Location = new System.Drawing.Point(7, 254);
             this.dgvRegistroCompras.Name = "dgvRegistroCompras";
             this.dgvRegistroCompras.ReadOnly = true;
-            this.dgvRegistroCompras.Size = new System.Drawing.Size(457, 186);
+            this.dgvRegistroCompras.Size = new System.Drawing.Size(623, 272);
             this.dgvRegistroCompras.TabIndex = 18;
             // 
             // producto
@@ -156,22 +162,22 @@
             this.subTotal.Name = "subTotal";
             this.subTotal.ReadOnly = true;
             // 
-            // btnagregar
+            // btnAgregar
             // 
-            this.btnagregar.BackColor = System.Drawing.Color.Silver;
-            this.btnagregar.FlatAppearance.BorderSize = 0;
-            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnagregar.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnagregar.IconColor = System.Drawing.Color.Green;
-            this.btnagregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnagregar.IconSize = 25;
-            this.btnagregar.Location = new System.Drawing.Point(723, 150);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(75, 80);
-            this.btnagregar.TabIndex = 17;
-            this.btnagregar.Text = "Agregar Compra";
-            this.btnagregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.Silver;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAgregar.IconColor = System.Drawing.Color.Green;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 25;
+            this.btnAgregar.Location = new System.Drawing.Point(723, 150);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 80);
+            this.btnAgregar.TabIndex = 17;
+            this.btnAgregar.Text = "Agregar Compra";
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // gbInfProducto
             // 
@@ -215,6 +221,7 @@
             this.numUpDCantidad.Name = "numUpDCantidad";
             this.numUpDCantidad.Size = new System.Drawing.Size(120, 22);
             this.numUpDCantidad.TabIndex = 9;
+            this.numUpDCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyInteger_KeyPress);
             // 
             // lblCantidad
             // 
@@ -232,6 +239,7 @@
             this.txtprecioVenta.Name = "txtprecioVenta";
             this.txtprecioVenta.Size = new System.Drawing.Size(100, 22);
             this.txtprecioVenta.TabIndex = 7;
+            this.txtprecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
             // 
             // lblPrecioVenta
             // 
@@ -249,6 +257,7 @@
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(100, 22);
             this.txtPrecioCompra.TabIndex = 5;
+            this.txtPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
             // 
             // lblPrecioCompra
             // 
@@ -273,6 +282,7 @@
             this.txtCodProducto.Name = "txtCodProducto";
             this.txtCodProducto.Size = new System.Drawing.Size(100, 22);
             this.txtCodProducto.TabIndex = 2;
+            this.txtCodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyInteger_KeyPress);
             // 
             // lblProductos
             // 
@@ -318,7 +328,7 @@
             this.iconButtonLupa.IconColor = System.Drawing.Color.Black;
             this.iconButtonLupa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonLupa.IconSize = 15;
-            this.iconButtonLupa.Location = new System.Drawing.Point(176, 53);
+            this.iconButtonLupa.Location = new System.Drawing.Point(192, 53);
             this.iconButtonLupa.Name = "iconButtonLupa";
             this.iconButtonLupa.Size = new System.Drawing.Size(42, 27);
             this.iconButtonLupa.TabIndex = 4;
@@ -327,10 +337,14 @@
             // cbRazonSocial
             // 
             this.cbRazonSocial.FormattingEnabled = true;
+            this.cbRazonSocial.Items.AddRange(new object[] {
+            "opcion1",
+            "opcion2"});
             this.cbRazonSocial.Location = new System.Drawing.Point(240, 55);
             this.cbRazonSocial.Name = "cbRazonSocial";
             this.cbRazonSocial.Size = new System.Drawing.Size(154, 25);
             this.cbRazonSocial.TabIndex = 3;
+            this.cbRazonSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noWrite_KeyPress);
             // 
             // txtNumDoc
             // 
@@ -339,6 +353,7 @@
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(151, 23);
             this.txtNumDoc.TabIndex = 2;
+            this.txtNumDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyInteger_KeyPress);
             // 
             // lblRazonSocial
             // 
@@ -391,6 +406,7 @@
             this.cbTipoDoc.Name = "cbTipoDoc";
             this.cbTipoDoc.Size = new System.Drawing.Size(172, 25);
             this.cbTipoDoc.TabIndex = 3;
+            this.cbTipoDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noWrite_KeyPress);
             // 
             // txtFecha
             // 
@@ -420,17 +436,21 @@
             this.lblFecha.TabIndex = 0;
             this.lblFecha.Text = "Fecha:";
             // 
+            // errIngresoDatos
+            // 
+            this.errIngresoDatos.ContainerControl = this;
+            // 
             // frmRegitroCompraRepositor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.iconBtnRegistrar);
+            this.ClientSize = new System.Drawing.Size(800, 538);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtTotalPagar);
             this.Controls.Add(this.lblTotalPagar);
             this.Controls.Add(this.dgvRegistroCompras);
-            this.Controls.Add(this.btnagregar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbInfProducto);
             this.Controls.Add(this.gbInforProveedor);
             this.Controls.Add(this.lblTutulo);
@@ -446,6 +466,7 @@
             this.gbInforProveedor.PerformLayout();
             this.gbInfCompra.ResumeLayout(false);
             this.gbInfCompra.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errIngresoDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,7 +474,7 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton iconBtnRegistrar;
+        private FontAwesome.Sharp.IconButton btnRegistrar;
         private System.Windows.Forms.TextBox txtTotalPagar;
         private System.Windows.Forms.Label lblTotalPagar;
         private System.Windows.Forms.DataGridView dgvRegistroCompras;
@@ -461,7 +482,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
-        private FontAwesome.Sharp.IconButton btnagregar;
+        private FontAwesome.Sharp.IconButton btnAgregar;
         private System.Windows.Forms.GroupBox gbInfProducto;
         private FontAwesome.Sharp.IconButton iconBtnLupa;
         private System.Windows.Forms.NumericUpDown numUpDCantidad;
@@ -486,5 +507,6 @@
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.ErrorProvider errIngresoDatos;
     }
 }

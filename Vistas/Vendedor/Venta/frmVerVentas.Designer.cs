@@ -54,11 +54,8 @@
             this.codigoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.masCant = new System.Windows.Forms.DataGridViewButtonColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menosCant = new System.Windows.Forms.DataGridViewButtonColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
@@ -69,7 +66,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Green;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(557, 422);
+            this.textBox1.Location = new System.Drawing.Point(551, 489);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 37);
@@ -90,7 +87,7 @@
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.ForeColor = System.Drawing.Color.Gray;
-            this.button2.Location = new System.Drawing.Point(608, 186);
+            this.button2.Location = new System.Drawing.Point(747, 173);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 23);
             this.button2.TabIndex = 19;
@@ -127,7 +124,7 @@
             this.dgvResults.Location = new System.Drawing.Point(19, 51);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.RowHeadersVisible = false;
-            this.dgvResults.Size = new System.Drawing.Size(486, 167);
+            this.dgvResults.Size = new System.Drawing.Size(714, 167);
             this.dgvResults.TabIndex = 6;
             // 
             // codigo
@@ -157,7 +154,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(552, 396);
+            this.lblTotal.Location = new System.Drawing.Point(546, 459);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(62, 25);
             this.lblTotal.TabIndex = 27;
@@ -174,7 +171,7 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 17;
-            this.iconButton4.Location = new System.Drawing.Point(418, 422);
+            this.iconButton4.Location = new System.Drawing.Point(412, 487);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(128, 37);
             this.iconButton4.TabIndex = 24;
@@ -187,7 +184,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(635, 31);
+            this.label3.Location = new System.Drawing.Point(774, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 47);
             this.label3.TabIndex = 17;
@@ -197,7 +194,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(600, 104);
+            this.label2.Location = new System.Drawing.Point(739, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 21);
             this.label2.TabIndex = 2;
@@ -207,7 +204,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(705, 104);
+            this.label8.Location = new System.Drawing.Point(844, 91);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 21);
             this.label8.TabIndex = 7;
@@ -224,7 +221,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.White;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 17;
-            this.iconButton5.Location = new System.Drawing.Point(16, 424);
+            this.iconButton5.Location = new System.Drawing.Point(10, 487);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(128, 37);
             this.iconButton5.TabIndex = 25;
@@ -244,7 +241,7 @@
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 17;
-            this.iconButton3.Location = new System.Drawing.Point(284, 422);
+            this.iconButton3.Location = new System.Drawing.Point(278, 487);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(128, 37);
             this.iconButton3.TabIndex = 23;
@@ -268,7 +265,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(-1, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(816, 258);
+            this.groupBox1.Size = new System.Drawing.Size(962, 258);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
@@ -276,7 +273,7 @@
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(608, 157);
+            this.button1.Location = new System.Drawing.Point(747, 144);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 23);
             this.button1.TabIndex = 18;
@@ -294,7 +291,7 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 17;
-            this.iconButton2.Location = new System.Drawing.Point(150, 424);
+            this.iconButton2.Location = new System.Drawing.Point(144, 487);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(128, 37);
             this.iconButton2.TabIndex = 22;
@@ -322,11 +319,8 @@
             this.codigoVenta,
             this.productoVenta,
             this.precioVenta,
-            this.masCant,
             this.cantidad,
-            this.menosCant,
-            this.subtotal,
-            this.eliminar});
+            this.subtotal});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,7 +340,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSale.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSale.RowHeadersVisible = false;
-            this.dgvSale.Size = new System.Drawing.Size(816, 129);
+            this.dgvSale.Size = new System.Drawing.Size(962, 178);
             this.dgvSale.TabIndex = 26;
             // 
             // codigoVenta
@@ -364,37 +358,22 @@
             this.precioVenta.HeaderText = "Precio";
             this.precioVenta.Name = "precioVenta";
             // 
-            // masCant
-            // 
-            this.masCant.HeaderText = "";
-            this.masCant.Name = "masCant";
-            // 
             // cantidad
             // 
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
-            // 
-            // menosCant
-            // 
-            this.menosCant.HeaderText = "";
-            this.menosCant.Name = "menosCant";
             // 
             // subtotal
             // 
             this.subtotal.HeaderText = "Subtotal";
             this.subtotal.Name = "subtotal";
             // 
-            // eliminar
-            // 
-            this.eliminar.HeaderText = "";
-            this.eliminar.Name = "eliminar";
-            // 
             // frmRegistrarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(816, 489);
+            this.ClientSize = new System.Drawing.Size(960, 538);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.iconButton4);
@@ -440,10 +419,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioVenta;
-        private System.Windows.Forms.DataGridViewButtonColumn masCant;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewButtonColumn menosCant;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.DataGridViewButtonColumn eliminar;
     }
 }

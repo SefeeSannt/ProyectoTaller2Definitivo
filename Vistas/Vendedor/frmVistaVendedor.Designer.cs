@@ -38,10 +38,10 @@
             this.iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             this.tsmiConsultarProd = new System.Windows.Forms.ToolStripMenuItem();
             this.pntCabecera = new System.Windows.Forms.Panel();
+            this.iconBtnSalir = new FontAwesome.Sharp.IconButton();
             this.lblNombreRegistro = new System.Windows.Forms.Label();
             this.lblTituloAdm = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.iconBtnSalir = new FontAwesome.Sharp.IconButton();
             this.menuStrip1.SuspendLayout();
             this.pntCabecera.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 70);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(944, 52);
+            this.menuStrip1.Size = new System.Drawing.Size(960, 52);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,14 +81,14 @@
             // tsmiRegistrarVenta
             // 
             this.tsmiRegistrarVenta.Name = "tsmiRegistrarVenta";
-            this.tsmiRegistrarVenta.Size = new System.Drawing.Size(172, 22);
+            this.tsmiRegistrarVenta.Size = new System.Drawing.Size(180, 22);
             this.tsmiRegistrarVenta.Text = "Registrar venta";
             this.tsmiRegistrarVenta.Click += new System.EventHandler(this.tsmiRegistrarVenta_Click);
             // 
             // consultarVenta
             // 
             this.consultarVenta.Name = "consultarVenta";
-            this.consultarVenta.Size = new System.Drawing.Size(172, 22);
+            this.consultarVenta.Size = new System.Drawing.Size(180, 22);
             this.consultarVenta.Text = "Consultar venta";
             this.consultarVenta.Click += new System.EventHandler(this.consultarVenta_Click);
             // 
@@ -111,14 +111,14 @@
             // tsmiAltaCliente
             // 
             this.tsmiAltaCliente.Name = "tsmiAltaCliente";
-            this.tsmiAltaCliente.Size = new System.Drawing.Size(177, 22);
+            this.tsmiAltaCliente.Size = new System.Drawing.Size(180, 22);
             this.tsmiAltaCliente.Text = "Registrar cliente";
             this.tsmiAltaCliente.Click += new System.EventHandler(this.tsmiAltaCliente_Click);
             // 
             // tsmiListarCliente
             // 
             this.tsmiListarCliente.Name = "tsmiListarCliente";
-            this.tsmiListarCliente.Size = new System.Drawing.Size(177, 22);
+            this.tsmiListarCliente.Size = new System.Drawing.Size(180, 22);
             this.tsmiListarCliente.Text = "Consultar cliente";
             this.tsmiListarCliente.Click += new System.EventHandler(this.tsmiListarCliente_Click);
             // 
@@ -154,8 +154,29 @@
             this.pntCabecera.Location = new System.Drawing.Point(0, 0);
             this.pntCabecera.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pntCabecera.Name = "pntCabecera";
-            this.pntCabecera.Size = new System.Drawing.Size(944, 70);
+            this.pntCabecera.Size = new System.Drawing.Size(960, 70);
             this.pntCabecera.TabIndex = 11;
+            // 
+            // iconBtnSalir
+            // 
+            this.iconBtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(98)))), ((int)(((byte)(37)))));
+            this.iconBtnSalir.FlatAppearance.BorderSize = 0;
+            this.iconBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnSalir.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnSalir.ForeColor = System.Drawing.Color.White;
+            this.iconBtnSalir.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.iconBtnSalir.IconColor = System.Drawing.Color.White;
+            this.iconBtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnSalir.IconSize = 35;
+            this.iconBtnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconBtnSalir.Location = new System.Drawing.Point(851, 20);
+            this.iconBtnSalir.Name = "iconBtnSalir";
+            this.iconBtnSalir.Size = new System.Drawing.Size(93, 41);
+            this.iconBtnSalir.TabIndex = 15;
+            this.iconBtnSalir.Text = "Salir";
+            this.iconBtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnSalir.UseVisualStyleBackColor = false;
+            this.iconBtnSalir.Click += new System.EventHandler(this.iconBtnSalir_Click);
             // 
             // lblNombreRegistro
             // 
@@ -193,33 +214,12 @@
             this.lblTitulo.TabIndex = 10;
             this.lblTitulo.Text = "Tienda zonafitt";
             // 
-            // iconBtnSalir
-            // 
-            this.iconBtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(98)))), ((int)(((byte)(37)))));
-            this.iconBtnSalir.FlatAppearance.BorderSize = 0;
-            this.iconBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnSalir.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnSalir.ForeColor = System.Drawing.Color.White;
-            this.iconBtnSalir.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
-            this.iconBtnSalir.IconColor = System.Drawing.Color.White;
-            this.iconBtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnSalir.IconSize = 35;
-            this.iconBtnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconBtnSalir.Location = new System.Drawing.Point(851, 20);
-            this.iconBtnSalir.Name = "iconBtnSalir";
-            this.iconBtnSalir.Size = new System.Drawing.Size(93, 41);
-            this.iconBtnSalir.TabIndex = 15;
-            this.iconBtnSalir.Text = "Salir";
-            this.iconBtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnSalir.UseVisualStyleBackColor = false;
-            this.iconBtnSalir.Click += new System.EventHandler(this.iconBtnSalir_Click);
-            // 
             // frmVistaVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(944, 621);
+            this.ClientSize = new System.Drawing.Size(960, 660);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pntCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
