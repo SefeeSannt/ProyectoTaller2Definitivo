@@ -1,6 +1,9 @@
 ﻿using CapaPresentacion;
 using CapaPresentacion.Helpers;
 using CapaPresentacion.Vistas.Administrador;
+using ProyectoTaller2Definitivo.Vistas.Repositor;
+using ProyectoTaller2Definitivo.Vistas.Vendedor;
+
 //using CapaPresentacion.Vistas.Repositor;
 //using CapaPresentacion.Vistas.Vendedor;
 using System;
@@ -29,7 +32,13 @@ namespace CapaPresentacion.Vistas.Login
             this.Hide();
             vistaAdmin.FormClosed += (s, args) => this.Show();
         }
-         /*
+        
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnSupervisor_Click(object sender, EventArgs e)
         {
             var vistaRepositor = new frmVistaRepositor();
@@ -37,21 +46,15 @@ namespace CapaPresentacion.Vistas.Login
             this.Hide();
             vistaRepositor.FormClosed += (s, args) => this.Show();
         }
-       
 
-        
         private void btnVendedor_Click(object sender, EventArgs e)
         {
-            var frmVendedor = new frmVendedor();
+            var frmVendedor = new frmVistaVendedor();
             frmVendedor.Show();
             this.Hide();
             frmVendedor.FormClosed += (s, args) => this.Show();
-        }         
-         */
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
+
+       
     }
 }

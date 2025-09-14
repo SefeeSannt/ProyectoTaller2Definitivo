@@ -35,12 +35,11 @@ namespace CapaPresentacion.Vistas.Administrador
             this.Agregra = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pntCabecera = new System.Windows.Forms.Panel();
+            this.iconBtnSalir = new FontAwesome.Sharp.IconButton();
             this.lblNombreRegistro = new System.Windows.Forms.Label();
             this.lblTituloAdm = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.imiSalir = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.tsmiListarProd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAltaProd = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,43 +71,61 @@ namespace CapaPresentacion.Vistas.Administrador
             // pntCabecera
             // 
             this.pntCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(98)))), ((int)(((byte)(37)))));
+            this.pntCabecera.Controls.Add(this.iconBtnSalir);
             this.pntCabecera.Controls.Add(this.lblNombreRegistro);
             this.pntCabecera.Controls.Add(this.lblTituloAdm);
             this.pntCabecera.Controls.Add(this.lblTitulo);
-            this.pntCabecera.Controls.Add(this.iconButton1);
             this.pntCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pntCabecera.Location = new System.Drawing.Point(0, 0);
             this.pntCabecera.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pntCabecera.Name = "pntCabecera";
             this.pntCabecera.Size = new System.Drawing.Size(960, 70);
             this.pntCabecera.TabIndex = 9;
-            this.pntCabecera.Paint += new System.Windows.Forms.PaintEventHandler(this.pntCabecera_Paint);
+            // 
+            // iconBtnSalir
+            // 
+            this.iconBtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(98)))), ((int)(((byte)(37)))));
+            this.iconBtnSalir.FlatAppearance.BorderSize = 0;
+            this.iconBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnSalir.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnSalir.ForeColor = System.Drawing.Color.White;
+            this.iconBtnSalir.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.iconBtnSalir.IconColor = System.Drawing.Color.White;
+            this.iconBtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnSalir.IconSize = 35;
+            this.iconBtnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconBtnSalir.Location = new System.Drawing.Point(867, 12);
+            this.iconBtnSalir.Name = "iconBtnSalir";
+            this.iconBtnSalir.Size = new System.Drawing.Size(93, 41);
+            this.iconBtnSalir.TabIndex = 14;
+            this.iconBtnSalir.Text = "Salir";
+            this.iconBtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnSalir.UseVisualStyleBackColor = false;
+            this.iconBtnSalir.Click += new System.EventHandler(this.iconBtnSalir_Click);
             // 
             // lblNombreRegistro
             // 
             this.lblNombreRegistro.AutoSize = true;
             this.lblNombreRegistro.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreRegistro.ForeColor = System.Drawing.Color.White;
-            this.lblNombreRegistro.Location = new System.Drawing.Point(818, 24);
+            this.lblNombreRegistro.Location = new System.Drawing.Point(731, 24);
             this.lblNombreRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreRegistro.Name = "lblNombreRegistro";
             this.lblNombreRegistro.Size = new System.Drawing.Size(129, 19);
             this.lblNombreRegistro.TabIndex = 12;
             this.lblNombreRegistro.Text = "nombreCompleto";
-            this.lblNombreRegistro.Click += new System.EventHandler(this.lblNombreRegistro_Click);
             // 
             // lblTituloAdm
             // 
             this.lblTituloAdm.AutoSize = true;
             this.lblTituloAdm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloAdm.ForeColor = System.Drawing.Color.White;
-            this.lblTituloAdm.Location = new System.Drawing.Point(711, 24);
+            this.lblTituloAdm.Location = new System.Drawing.Point(624, 24);
             this.lblTituloAdm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloAdm.Name = "lblTituloAdm";
             this.lblTituloAdm.Size = new System.Drawing.Size(108, 19);
             this.lblTituloAdm.TabIndex = 11;
             this.lblTituloAdm.Text = "Administrador";
-            this.lblTituloAdm.Click += new System.EventHandler(this.lblTituloAdm_Click);
             // 
             // lblTitulo
             // 
@@ -121,32 +138,12 @@ namespace CapaPresentacion.Vistas.Administrador
             this.lblTitulo.Size = new System.Drawing.Size(183, 29);
             this.lblTitulo.TabIndex = 10;
             this.lblTitulo.Text = "Tienda zonafitt";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(98)))), ((int)(((byte)(37)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 22;
-            this.iconButton1.Location = new System.Drawing.Point(680, 18);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(40, 33);
-            this.iconButton1.TabIndex = 8;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // menuStrip1
             // 
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(166)))), ((int)(((byte)(54)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imiSalir,
             this.iconMenuItem1,
             this.iconMenuItem2,
             this.iconMenuItem3});
@@ -156,20 +153,6 @@ namespace CapaPresentacion.Vistas.Administrador
             this.menuStrip1.Size = new System.Drawing.Size(960, 52);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // imiSalir
-            // 
-            this.imiSalir.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imiSalir.ForeColor = System.Drawing.Color.White;
-            this.imiSalir.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.imiSalir.IconColor = System.Drawing.Color.White;
-            this.imiSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imiSalir.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.imiSalir.Name = "imiSalir";
-            this.imiSalir.Size = new System.Drawing.Size(61, 38);
-            this.imiSalir.Text = "Salir";
-            this.imiSalir.Click += new System.EventHandler(this.imiSalir_Click);
             // 
             // iconMenuItem1
             // 
@@ -187,19 +170,18 @@ namespace CapaPresentacion.Vistas.Administrador
             this.iconMenuItem1.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.iconMenuItem1.Size = new System.Drawing.Size(94, 38);
             this.iconMenuItem1.Text = "Productos";
-            this.iconMenuItem1.Click += new System.EventHandler(this.iconMenuItem1_Click);
             // 
             // tsmiListarProd
             // 
             this.tsmiListarProd.Name = "tsmiListarProd";
-            this.tsmiListarProd.Size = new System.Drawing.Size(142, 22);
+            this.tsmiListarProd.Size = new System.Drawing.Size(180, 22);
             this.tsmiListarProd.Text = "Listar";
             this.tsmiListarProd.Click += new System.EventHandler(this.tsmiListarProd_Click);
             // 
             // tsmiAltaProd
             // 
             this.tsmiAltaProd.Name = "tsmiAltaProd";
-            this.tsmiAltaProd.Size = new System.Drawing.Size(142, 22);
+            this.tsmiAltaProd.Size = new System.Drawing.Size(180, 22);
             this.tsmiAltaProd.Text = "Dar de alta";
             this.tsmiAltaProd.Click += new System.EventHandler(this.tsmiAltaProd_Click);
             // 
@@ -224,12 +206,14 @@ namespace CapaPresentacion.Vistas.Administrador
             this.tsmiAltaUsuario.Name = "tsmiAltaUsuario";
             this.tsmiAltaUsuario.Size = new System.Drawing.Size(142, 22);
             this.tsmiAltaUsuario.Text = "Dar de alta";
+            this.tsmiAltaUsuario.Click += new System.EventHandler(this.tsmiAltaUsuario_Click);
             // 
             // tsmiListarUsuarios
             // 
             this.tsmiListarUsuarios.Name = "tsmiListarUsuarios";
             this.tsmiListarUsuarios.Size = new System.Drawing.Size(142, 22);
             this.tsmiListarUsuarios.Text = "Listar";
+            this.tsmiListarUsuarios.Click += new System.EventHandler(this.tsmiListarUsuarios_Click);
             // 
             // iconMenuItem3
             // 
@@ -292,7 +276,6 @@ namespace CapaPresentacion.Vistas.Administrador
         private Label lblNombreRegistro;
         private Label lblTituloAdm;
         private Label lblTitulo;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private MenuStrip menuStrip1;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
         private ToolStripMenuItem tsmiListarProd;
@@ -303,7 +286,7 @@ namespace CapaPresentacion.Vistas.Administrador
         private FontAwesome.Sharp.IconMenuItem iconMenuItem3;
         private ToolStripMenuItem tsmiDetalleVentas;
         private ToolStripMenuItem tsmiDetalleCompras;
-        private FontAwesome.Sharp.IconMenuItem imiSalir;
+        private FontAwesome.Sharp.IconButton iconBtnSalir;
     }
 
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoTaller2Definitivo.Vistas.Vendedor
+namespace ProyectoTaller2Definitivo.Vistas.Repositor
 {
-    public partial class frmRegistrarVenta : Form
+    public partial class frmRegitroCompraRepositor : Form
     {
-        public frmRegistrarVenta()
+        public frmRegitroCompraRepositor()
         {
             InitializeComponent();
         }

@@ -33,160 +33,174 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvUsuariosAlta = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTotalProductosRegistrados = new System.Windows.Forms.Label();
+            this.lblProductosRegistrados = new System.Windows.Forms.Label();
+            this.cbFiltrarEstadoProducto = new System.Windows.Forms.ComboBox();
+            this.txtProductoBuscarPor = new System.Windows.Forms.TextBox();
+            this.lblFiltroEstadoProducto = new System.Windows.Forms.Label();
+            this.lblBuscarNombre = new System.Windows.Forms.Label();
+            this.lblClientesReegistrados = new System.Windows.Forms.Label();
+            this.iconBtnLupaDetalleUser = new FontAwesome.Sharp.IconButton();
+            this.dgvListaProductos = new System.Windows.Forms.DataGridView();
+            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colImg = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colAccion = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.lblTituloListUsuarioAlta = new System.Windows.Forms.Label();
-            this.btnBuscarListUsuarioAlta = new FontAwesome.Sharp.IconButton();
-            this.txtBuscarUsuarioAlta = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosAlta)).BeginInit();
+            this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvUsuariosAlta
+            // lblTotalProductosRegistrados
             // 
-            this.dgvUsuariosAlta.AllowUserToAddRows = false;
-            this.dgvUsuariosAlta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuariosAlta.BackgroundColor = System.Drawing.Color.White;
-            this.dgvUsuariosAlta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvUsuariosAlta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuariosAlta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuariosAlta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuariosAlta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.nombre,
-            this.precioCosto,
-            this.precioVenta,
-            this.marca,
-            this.proveedor,
+            this.lblTotalProductosRegistrados.AutoSize = true;
+            this.lblTotalProductosRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProductosRegistrados.Location = new System.Drawing.Point(185, 382);
+            this.lblTotalProductosRegistrados.Name = "lblTotalProductosRegistrados";
+            this.lblTotalProductosRegistrados.Size = new System.Drawing.Size(16, 17);
+            this.lblTotalProductosRegistrados.TabIndex = 32;
+            this.lblTotalProductosRegistrados.Text = "0";
+            // 
+            // lblProductosRegistrados
+            // 
+            this.lblProductosRegistrados.AutoSize = true;
+            this.lblProductosRegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductosRegistrados.Location = new System.Drawing.Point(9, 382);
+            this.lblProductosRegistrados.Name = "lblProductosRegistrados";
+            this.lblProductosRegistrados.Size = new System.Drawing.Size(170, 17);
+            this.lblProductosRegistrados.TabIndex = 31;
+            this.lblProductosRegistrados.Text = "Total de usuarios registrados:";
+            // 
+            // cbFiltrarEstadoProducto
+            // 
+            this.cbFiltrarEstadoProducto.FormattingEnabled = true;
+            this.cbFiltrarEstadoProducto.Location = new System.Drawing.Point(286, 78);
+            this.cbFiltrarEstadoProducto.Name = "cbFiltrarEstadoProducto";
+            this.cbFiltrarEstadoProducto.Size = new System.Drawing.Size(239, 21);
+            this.cbFiltrarEstadoProducto.TabIndex = 30;
+            // 
+            // txtProductoBuscarPor
+            // 
+            this.txtProductoBuscarPor.Location = new System.Drawing.Point(12, 80);
+            this.txtProductoBuscarPor.Multiline = true;
+            this.txtProductoBuscarPor.Name = "txtProductoBuscarPor";
+            this.txtProductoBuscarPor.Size = new System.Drawing.Size(197, 19);
+            this.txtProductoBuscarPor.TabIndex = 29;
+            // 
+            // lblFiltroEstadoProducto
+            // 
+            this.lblFiltroEstadoProducto.AutoSize = true;
+            this.lblFiltroEstadoProducto.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltroEstadoProducto.Location = new System.Drawing.Point(283, 61);
+            this.lblFiltroEstadoProducto.Name = "lblFiltroEstadoProducto";
+            this.lblFiltroEstadoProducto.Size = new System.Drawing.Size(119, 17);
+            this.lblFiltroEstadoProducto.TabIndex = 28;
+            this.lblFiltroEstadoProducto.Text = "Filtrar por categoria:";
+            // 
+            // lblBuscarNombre
+            // 
+            this.lblBuscarNombre.AutoSize = true;
+            this.lblBuscarNombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarNombre.Location = new System.Drawing.Point(9, 64);
+            this.lblBuscarNombre.Name = "lblBuscarNombre";
+            this.lblBuscarNombre.Size = new System.Drawing.Size(116, 17);
+            this.lblBuscarNombre.TabIndex = 27;
+            this.lblBuscarNombre.Text = "Buscar por nombre:";
+            // 
+            // lblClientesReegistrados
+            // 
+            this.lblClientesReegistrados.AutoSize = true;
+            this.lblClientesReegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientesReegistrados.Location = new System.Drawing.Point(7, 5);
+            this.lblClientesReegistrados.Name = "lblClientesReegistrados";
+            this.lblClientesReegistrados.Size = new System.Drawing.Size(178, 26);
+            this.lblClientesReegistrados.TabIndex = 26;
+            this.lblClientesReegistrados.Text = "Lista de Productos";
+            // 
+            // iconBtnLupaDetalleUser
+            // 
+            this.iconBtnLupaDetalleUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iconBtnLupaDetalleUser.FlatAppearance.BorderSize = 0;
+            this.iconBtnLupaDetalleUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnLupaDetalleUser.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconBtnLupaDetalleUser.IconColor = System.Drawing.Color.White;
+            this.iconBtnLupaDetalleUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnLupaDetalleUser.IconSize = 19;
+            this.iconBtnLupaDetalleUser.Location = new System.Drawing.Point(215, 80);
+            this.iconBtnLupaDetalleUser.Name = "iconBtnLupaDetalleUser";
+            this.iconBtnLupaDetalleUser.Size = new System.Drawing.Size(41, 21);
+            this.iconBtnLupaDetalleUser.TabIndex = 25;
+            this.iconBtnLupaDetalleUser.UseVisualStyleBackColor = false;
+            // 
+            // dgvListaProductos
+            // 
+            this.dgvListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaProductos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreProducto,
+            this.categoria,
+            this.descripcion,
+            this.precio,
             this.stock,
-            this.colImg,
-            this.colAccion});
-            this.dgvUsuariosAlta.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvUsuariosAlta.Location = new System.Drawing.Point(0, 87);
-            this.dgvUsuariosAlta.Name = "dgvUsuariosAlta";
-            this.dgvUsuariosAlta.Size = new System.Drawing.Size(823, 363);
-            this.dgvUsuariosAlta.TabIndex = 0;
+            this.eliminar});
+            this.dgvListaProductos.Location = new System.Drawing.Point(12, 115);
+            this.dgvListaProductos.Name = "dgvListaProductos";
+            this.dgvListaProductos.RowHeadersVisible = false;
+            this.dgvListaProductos.Size = new System.Drawing.Size(737, 255);
+            this.dgvListaProductos.TabIndex = 24;
             // 
-            // codigo
+            // nombreProducto
             // 
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.Name = "codigo";
+            this.nombreProducto.HeaderText = "Nombre";
+            this.nombreProducto.Name = "nombreProducto";
             // 
-            // nombre
+            // categoria
             // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
             // 
-            // precioCosto
+            // descripcion
             // 
-            this.precioCosto.HeaderText = "Precio Costo";
-            this.precioCosto.Name = "precioCosto";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
             // 
-            // precioVenta
+            // precio
             // 
-            this.precioVenta.HeaderText = "Precio Venta";
-            this.precioVenta.Name = "precioVenta";
-            // 
-            // marca
-            // 
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            // 
-            // proveedor
-            // 
-            this.proveedor.HeaderText = "Proveedor";
-            this.proveedor.Name = "proveedor";
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
             // 
             // stock
             // 
             this.stock.HeaderText = "Stock";
             this.stock.Name = "stock";
             // 
-            // colImg
+            // eliminar
             // 
-            this.colImg.HeaderText = "Imagen";
-            this.colImg.Name = "colImg";
-            // 
-            // colAccion
-            // 
-            this.colAccion.HeaderText = "Accion";
-            this.colAccion.Name = "colAccion";
-            this.colAccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // lblTituloListUsuarioAlta
-            // 
-            this.lblTituloListUsuarioAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTituloListUsuarioAlta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTituloListUsuarioAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloListUsuarioAlta.ForeColor = System.Drawing.Color.White;
-            this.lblTituloListUsuarioAlta.Location = new System.Drawing.Point(0, 0);
-            this.lblTituloListUsuarioAlta.Name = "lblTituloListUsuarioAlta";
-            this.lblTituloListUsuarioAlta.Size = new System.Drawing.Size(823, 42);
-            this.lblTituloListUsuarioAlta.TabIndex = 22;
-            this.lblTituloListUsuarioAlta.Text = "Lista de Productos";
-            this.lblTituloListUsuarioAlta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnBuscarListUsuarioAlta
-            // 
-            this.btnBuscarListUsuarioAlta.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnBuscarListUsuarioAlta.BackColor = System.Drawing.Color.White;
-            this.btnBuscarListUsuarioAlta.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscarListUsuarioAlta.FlatAppearance.BorderSize = 0;
-            this.btnBuscarListUsuarioAlta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnBuscarListUsuarioAlta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnBuscarListUsuarioAlta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBuscarListUsuarioAlta.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarListUsuarioAlta.IconColor = System.Drawing.Color.Black;
-            this.btnBuscarListUsuarioAlta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarListUsuarioAlta.IconSize = 15;
-            this.btnBuscarListUsuarioAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarListUsuarioAlta.Location = new System.Drawing.Point(742, 51);
-            this.btnBuscarListUsuarioAlta.Name = "btnBuscarListUsuarioAlta";
-            this.btnBuscarListUsuarioAlta.Size = new System.Drawing.Size(57, 30);
-            this.btnBuscarListUsuarioAlta.TabIndex = 33;
-            this.btnBuscarListUsuarioAlta.Text = "Búscar";
-            this.btnBuscarListUsuarioAlta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarListUsuarioAlta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarListUsuarioAlta.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscarUsuarioAlta
-            // 
-            this.txtBuscarUsuarioAlta.Location = new System.Drawing.Point(530, 51);
-            this.txtBuscarUsuarioAlta.Multiline = true;
-            this.txtBuscarUsuarioAlta.Name = "txtBuscarUsuarioAlta";
-            this.txtBuscarUsuarioAlta.Size = new System.Drawing.Size(206, 31);
-            this.txtBuscarUsuarioAlta.TabIndex = 32;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Name = "eliminar";
             // 
             // frmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(823, 450);
-            this.Controls.Add(this.btnBuscarListUsuarioAlta);
-            this.Controls.Add(this.txtBuscarUsuarioAlta);
-            this.Controls.Add(this.lblTituloListUsuarioAlta);
-            this.Controls.Add(this.dgvUsuariosAlta);
+            this.ClientSize = new System.Drawing.Size(767, 450);
+            this.Controls.Add(this.lblTotalProductosRegistrados);
+            this.Controls.Add(this.lblProductosRegistrados);
+            this.Controls.Add(this.cbFiltrarEstadoProducto);
+            this.Controls.Add(this.txtProductoBuscarPor);
+            this.Controls.Add(this.lblFiltroEstadoProducto);
+            this.Controls.Add(this.lblBuscarNombre);
+            this.Controls.Add(this.lblClientesReegistrados);
+            this.Controls.Add(this.iconBtnLupaDetalleUser);
+            this.Controls.Add(this.dgvListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListaProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosAlta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,18 +208,20 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
 
         #endregion
 
-        private DataGridView dgvUsuariosAlta;
-        private DataGridViewTextBoxColumn codigo;
-        private DataGridViewTextBoxColumn nombre;
-        private DataGridViewTextBoxColumn precioCosto;
-        private DataGridViewTextBoxColumn precioVenta;
-        private DataGridViewTextBoxColumn marca;
-        private DataGridViewTextBoxColumn proveedor;
+        private Label lblTotalProductosRegistrados;
+        private Label lblProductosRegistrados;
+        private ComboBox cbFiltrarEstadoProducto;
+        private TextBox txtProductoBuscarPor;
+        private Label lblFiltroEstadoProducto;
+        private Label lblBuscarNombre;
+        private Label lblClientesReegistrados;
+        private FontAwesome.Sharp.IconButton iconBtnLupaDetalleUser;
+        private DataGridView dgvListaProductos;
+        private DataGridViewTextBoxColumn nombreProducto;
+        private DataGridViewTextBoxColumn categoria;
+        private DataGridViewTextBoxColumn descripcion;
+        private DataGridViewTextBoxColumn precio;
         private DataGridViewTextBoxColumn stock;
-        private DataGridViewImageColumn colImg;
-        private DataGridViewButtonColumn colAccion;
-        private Label lblTituloListUsuarioAlta;
-        private FontAwesome.Sharp.IconButton btnBuscarListUsuarioAlta;
-        private TextBox txtBuscarUsuarioAlta;
+        private DataGridViewButtonColumn eliminar;
     }
 }

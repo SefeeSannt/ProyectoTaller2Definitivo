@@ -105,11 +105,35 @@
     <Compile Include="Vistas\Login\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Repositor\frmConsultaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmConsultaProveedores.Designer.cs">
+      <DependentUpon>frmConsultaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmConsultaStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmConsultaStock.Designer.cs">
+      <DependentUpon>frmConsultaStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmDetalleCompraRepositor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmDetalleCompraRepositor.Designer.cs">
+      <DependentUpon>frmDetalleCompraRepositor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Repositor\frmDetalleInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Repositor\frmDetalleInventario.Designer.cs">
       <DependentUpon>frmDetalleInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmRegitroCompraRepositor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repositor\frmRegitroCompraRepositor.Designer.cs">
+      <DependentUpon>frmRegitroCompraRepositor.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Repositor\frmVistaRepositor.cs">
       <SubType>Form</SubType>
@@ -117,17 +141,35 @@
     <Compile Include="Vistas\Repositor\frmVistaRepositor.Designer.cs">
       <DependentUpon>frmVistaRepositor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Vendedor\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmClienteDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmClienteDetalle.Designer.cs">
+      <DependentUpon>frmClienteDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmConsultaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmConsultaVenta.Designer.cs">
+      <DependentUpon>frmConsultaVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmVendedorFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\frmVendedorFactura.Designer.cs">
+      <DependentUpon>frmVendedorFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Vendedor\frmVerVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Vendedor\frmVerVentas.Designer.cs">
       <DependentUpon>frmVerVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Vendedor\frmRegistrarVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Vendedor\frmRegistrarVenta.Designer.cs">
-      <DependentUpon>frmRegistrarVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Vendedor\frmVistaVendedor.cs">
       <SubType>Form</SubType>
@@ -171,14 +213,38 @@
     <EmbeddedResource Include="Vistas\Login\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repositor\frmConsultaProveedores.resx">
+      <DependentUpon>frmConsultaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repositor\frmConsultaStock.resx">
+      <DependentUpon>frmConsultaStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repositor\frmDetalleCompraRepositor.resx">
+      <DependentUpon>frmDetalleCompraRepositor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repositor\frmDetalleInventario.resx">
+      <DependentUpon>frmDetalleInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repositor\frmRegitroCompraRepositor.resx">
+      <DependentUpon>frmRegitroCompraRepositor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Repositor\frmVistaRepositor.resx">
       <DependentUpon>frmVistaRepositor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\frmClienteDetalle.resx">
+      <DependentUpon>frmClienteDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\frmConsultaVenta.resx">
+      <DependentUpon>frmConsultaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\frmVendedorFactura.resx">
+      <DependentUpon>frmVendedorFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Vendedor\frmVerVentas.resx">
       <DependentUpon>frmVerVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Vendedor\frmRegistrarVenta.resx">
-      <DependentUpon>frmRegistrarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Vendedor\frmVistaVendedor.resx">
       <DependentUpon>frmVistaVendedor.cs</DependentUpon>

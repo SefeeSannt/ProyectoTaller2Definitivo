@@ -1,6 +1,10 @@
 ﻿using CapaPresentacion.Vistas.Administrador;
 using CapaPresentacion.Vistas.Administrador.Productos;
 using CapaPresentacion.Vistas.Administrador.Reportes;
+using CapaPresentacion.Vistas.Administrador.Usuarios;
+using ProyectoTaller2Definitivo.Vistas.Administrador.Usuarios;
+
+
 //using CapaPresentacion.Vistas.Administrador.Usuario;
 using System;
 using System.Collections.Generic;
@@ -52,7 +56,6 @@ namespace CapaPresentacion.Vistas.Administrador
             frm.Show();
         } 
 
-
         private void tsmiDetalleCompras_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -65,22 +68,6 @@ namespace CapaPresentacion.Vistas.Administrador
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
-
-        /*
-        private void tsmiAltaUsuario_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                form.Close();
-            }
-
-            Form frm = new frmAltaUsuario();
-            frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }         
-         */
-
 
         private void tsmiDetalleVentas_Click(object sender, EventArgs e)
         {
@@ -95,22 +82,6 @@ namespace CapaPresentacion.Vistas.Administrador
             frm.Show();
         }
 
-        /*
-        private void tsmiListarUsuarios_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                form.Close();
-            }
-
-            Form frm = new frmListaUsuarios();
-            frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }         
-         */
-
-
         //Funcion load que añade un color backround en el formulario padre del Administrador
         private void FormMDI_Load(object sender, EventArgs e)
         {
@@ -124,44 +95,36 @@ namespace CapaPresentacion.Vistas.Administrador
             }
         }
 
-        private void imiSalir_Click(object sender, EventArgs e)
+
+        private void tsmiAltaUsuario_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+
+            Form frm = new frmAltaUsuario();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void tsmiListarUsuarios_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+
+            Form frm = new frmDetalleUsuario();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void iconBtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void pntCabecera_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void iconMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTituloAdm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombreRegistro_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

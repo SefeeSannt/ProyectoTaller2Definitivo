@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoTaller2Definitivo.Vistas.Repositor
 {
-    public partial class frmDetalleInventario : Form
+    public partial class frmDetalleCompraRepositor : Form
     {
-        public frmDetalleInventario()
+        public frmDetalleCompraRepositor()
         {
             InitializeComponent();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

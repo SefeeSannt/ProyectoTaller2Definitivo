@@ -72,6 +72,7 @@ namespace CapaPresentacion.Vistas.Login
             this.btnSupervisor.Text = "Repositor";
             this.btnSupervisor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSupervisor.UseVisualStyleBackColor = false;
+            this.btnSupervisor.Click += new System.EventHandler(this.btnSupervisor_Click);
             // 
             // btnAdmin
             // 
@@ -110,6 +111,7 @@ namespace CapaPresentacion.Vistas.Login
             this.btnVendedor.Text = "Vendedor";
             this.btnVendedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVendedor.UseVisualStyleBackColor = false;
+            this.btnVendedor.Click += new System.EventHandler(this.btnVendedor_Click);
             // 
             // pnlFondo
             // 
