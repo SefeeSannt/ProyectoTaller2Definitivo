@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.Helpers;
+using CapaNegocio;
 
 namespace ProyectoTaller2Definitivo.Vistas.Vendedor
 {
@@ -38,10 +39,15 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtNombreC.Text))
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
-                errIngresoDatos.SetError(txtNombreC, "El campo Nombre Completo es obligatorio");
+                errIngresoDatos.SetError(txtNombre, "El campo Nombre es obligatorio");
                 return;
+            }
+
+            if (string.IsNullOrEmpty(txtApellido.Text))
+            {
+                errIngresoDatos.SetError(txtApellido,"El campo Apellido es obligatorio");
             }
 
             if (string.IsNullOrEmpty(txtTelefono.Text))
@@ -50,7 +56,25 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
                 return;
             }
 
-            MessageBox.Show("Producto registrado con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var nuevoCliente = new ClienteModel
+            {
+                Dni = int.Parse(txtDocumento.Text),
+                Nombre = txtNombre.Text,
+                Apellido = txtApellido.Text,
+                Telefono = int.Parse(txtTelefono.Text)
+            };
+
+            try
+            {
+                var negocio = new CN_cliente();
+                negocio.AgregarCliente(nuevoCliente);
+                MessageBox.Show("Cliente registrado con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarClientesEnGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCanecelar_Click(object sender, EventArgs e)
@@ -62,7 +86,8 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
             if (result == DialogResult.Yes)
             {
                 txtDocumento.Clear();
-                txtNombreC.Clear();
+                txtNombre.Clear();
+                txtApellido.Clear();
                 txtTelefono.Clear();
             }
         }
@@ -77,6 +102,18 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
             {
                 this.Close();
             }
+        }
+
+        private void CargarClientesEnGrid()
+        {
+            var negocio = new CN_cliente();
+            var lista = negocio.ObtenerClientes();
+            dgvClientes.DataSource = lista;
+        }
+
+        private void frmCliente_Load(object sender, EventArgs e)
+        {
+            CargarClientesEnGrid();
         }
     }
 }
