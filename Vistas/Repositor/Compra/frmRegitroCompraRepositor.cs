@@ -61,11 +61,7 @@ namespace ProyectoTaller2Definitivo.Vistas.Repositor
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtprecioVenta.Text))
-            {
-                errIngresoDatos.SetError(txtprecioVenta, "Ingrese un precio de venta");
-                return;
-            }
+            
 
             if (numUpDCantidad.Value == 0)
             {

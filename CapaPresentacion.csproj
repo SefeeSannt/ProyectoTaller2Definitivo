@@ -115,6 +115,12 @@
     <Compile Include="Vistas\Login\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Repositor\Proveedor\frmAltaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repositor\Proveedor\frmAltaProveedor.Designer.cs">
+      <DependentUpon>frmAltaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Repositor\Proveedor\frmConsultaProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,12 @@
     </Compile>
     <Compile Include="Vistas\Vendedor\Cliente\frmClienteDetalle.Designer.cs">
       <DependentUpon>frmClienteDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\Venta\frmConsultarListadoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vendedor\Venta\frmConsultarListadoProductos.Designer.cs">
+      <DependentUpon>frmConsultarListadoProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Vendedor\Venta\frmConsultaVenta.cs">
       <SubType>Form</SubType>
@@ -223,6 +235,9 @@
     <EmbeddedResource Include="Vistas\Login\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repositor\Proveedor\frmAltaProveedor.resx">
+      <DependentUpon>frmAltaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Repositor\Proveedor\frmConsultaProveedores.resx">
       <DependentUpon>frmConsultaProveedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Vendedor\Cliente\frmClienteDetalle.resx">
       <DependentUpon>frmClienteDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vendedor\Venta\frmConsultarListadoProductos.resx">
+      <DependentUpon>frmConsultarListadoProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Vendedor\Venta\frmConsultaVenta.resx">
       <DependentUpon>frmConsultaVenta.cs</DependentUpon>

@@ -26,7 +26,7 @@ namespace ProyectoTaller2Definitivo.Vistas.Repositor
             {
                 txtDocumento.Clear();
                 txtProveedor.Clear();
-                cboRubro.SelectedIndex = -1;
+               
             }
         }
     }

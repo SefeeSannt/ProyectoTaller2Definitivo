@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion.Vistas.Administrador.Reportes;
+
 using ProyectoTaller2Definitivo.Vistas.Repositor;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.Helpers;
+using ProyectoTaller2Definitivo.Vistas.Repositor.Proveedor;
 
 namespace ProyectoTaller2Definitivo.Vistas.Repositor
 {
@@ -88,6 +90,19 @@ namespace ProyectoTaller2Definitivo.Vistas.Repositor
         private void iconBtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tsmAltaProveedor_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+
+            Form frm = new frmAltaProveedor();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
     }
 }

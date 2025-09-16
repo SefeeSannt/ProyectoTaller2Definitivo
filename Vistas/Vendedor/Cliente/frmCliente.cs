@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.Helpers;
-using CapaNegocio;
+//using CapaNegocio;
 
 namespace ProyectoTaller2Definitivo.Vistas.Vendedor
 {
@@ -28,7 +28,7 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
         {
             Validaciones.onlyInteger(sender, e, errIngresoDatos);
         }
-
+        
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             errIngresoDatos.Clear();
@@ -55,27 +55,30 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
                 errIngresoDatos.SetError(txtTelefono, "El campo Telefono es obligatorio");
                 return;
             }
-
-            var nuevoCliente = new ClienteModel
-            {
-                Dni = int.Parse(txtDocumento.Text),
-                Nombre = txtNombre.Text,
-                Apellido = txtApellido.Text,
-                Telefono = int.Parse(txtTelefono.Text)
-            };
-
-            try
-            {
-                var negocio = new CN_cliente();
-                negocio.AgregarCliente(nuevoCliente);
-                MessageBox.Show("Cliente registrado con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarClientesEnGrid();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al registrar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
+        /*
+                    var nuevoCliente = new ClienteModel
+                    {
+                        Dni = int.Parse(txtDocumento.Text),
+                        Nombre = txtNombre.Text,
+                        Apellido = txtApellido.Text,
+                        Telefono = int.Parse(txtTelefono.Text)
+                    };
+
+                    try
+                    {
+                        var negocio = new CN_cliente();
+                        negocio.AgregarCliente(nuevoCliente);
+                        MessageBox.Show("Cliente registrado con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarClientesEnGrid();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al registrar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+        */
 
         private void btnCanecelar_Click(object sender, EventArgs e)
         {
@@ -104,16 +107,19 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
             }
         }
 
-        private void CargarClientesEnGrid()
-        {
-            var negocio = new CN_cliente();
-            var lista = negocio.ObtenerClientes();
-            dgvClientes.DataSource = lista;
-        }
+       
 
-        private void frmCliente_Load(object sender, EventArgs e)
-        {
-            CargarClientesEnGrid();
-        }
+        /* private void CargarClientesEnGrid()
+         {
+             var negocio = new CN_cliente();
+             var lista = negocio.ObtenerClientes();
+             dgvClientes.DataSource = lista;
+         }*/
+        /* 
+         private void frmCliente_Load(object sender, EventArgs e)
+         {
+             CargarClientesEnGrid();
+         }
+         */
     }
 }

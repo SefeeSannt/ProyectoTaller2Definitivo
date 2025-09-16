@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Vistas.Administrador.Reportes
+namespace ProyectoTaller2Definitivo.Vistas.Vendedor.Venta
 {
-    public partial class frmDetalleCompras : Form
+    public partial class frmConsultarListadoProductos : Form
     {
-        public frmDetalleCompras()
+        public frmConsultarListadoProductos()
         {
             InitializeComponent();
         }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        
     }
 }

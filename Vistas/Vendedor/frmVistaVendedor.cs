@@ -1,5 +1,6 @@
 ﻿using ProyectoTaller2Definitivo.Vistas.Administrador.Usuarios;
 using ProyectoTaller2Definitivo.Vistas.Vendedor;
+using ProyectoTaller2Definitivo.Vistas.Vendedor.Venta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,6 +89,20 @@ namespace ProyectoTaller2Definitivo.Vistas.Vendedor
         private void iconBtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tsmiConsultarProd_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+
+            Form frm = new frmConsultarListadoProductos();
+
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
     }
 }

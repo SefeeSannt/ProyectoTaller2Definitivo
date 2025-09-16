@@ -37,9 +37,13 @@
             this.lblClientesReegistrados = new System.Windows.Forms.Label();
             this.iconBtnLupaDetalleUser = new FontAwesome.Sharp.IconButton();
             this.dgvDetalleCliente = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblBuscarPOrDNI = new System.Windows.Forms.Label();
             this.numDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domicilioCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCliente)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +71,7 @@
             // cbFiltrarEstadoCliente
             // 
             this.cbFiltrarEstadoCliente.FormattingEnabled = true;
-            this.cbFiltrarEstadoCliente.Location = new System.Drawing.Point(300, 81);
+            this.cbFiltrarEstadoCliente.Location = new System.Drawing.Point(297, 81);
             this.cbFiltrarEstadoCliente.Name = "cbFiltrarEstadoCliente";
             this.cbFiltrarEstadoCliente.Size = new System.Drawing.Size(239, 21);
             this.cbFiltrarEstadoCliente.TabIndex = 21;
@@ -77,14 +81,14 @@
             this.txtClienteBuscarPor.Location = new System.Drawing.Point(26, 83);
             this.txtClienteBuscarPor.Multiline = true;
             this.txtClienteBuscarPor.Name = "txtClienteBuscarPor";
-            this.txtClienteBuscarPor.Size = new System.Drawing.Size(197, 19);
+            this.txtClienteBuscarPor.Size = new System.Drawing.Size(144, 19);
             this.txtClienteBuscarPor.TabIndex = 19;
             // 
             // lblFiltroEstadoCliente
             // 
             this.lblFiltroEstadoCliente.AutoSize = true;
             this.lblFiltroEstadoCliente.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltroEstadoCliente.Location = new System.Drawing.Point(297, 64);
+            this.lblFiltroEstadoCliente.Location = new System.Drawing.Point(294, 64);
             this.lblFiltroEstadoCliente.Name = "lblFiltroEstadoCliente";
             this.lblFiltroEstadoCliente.Size = new System.Drawing.Size(105, 17);
             this.lblFiltroEstadoCliente.TabIndex = 18;
@@ -119,47 +123,86 @@
             this.iconBtnLupaDetalleUser.IconColor = System.Drawing.Color.White;
             this.iconBtnLupaDetalleUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnLupaDetalleUser.IconSize = 19;
-            this.iconBtnLupaDetalleUser.Location = new System.Drawing.Point(229, 83);
+            this.iconBtnLupaDetalleUser.Location = new System.Drawing.Point(193, 83);
             this.iconBtnLupaDetalleUser.Name = "iconBtnLupaDetalleUser";
-            this.iconBtnLupaDetalleUser.Size = new System.Drawing.Size(41, 21);
+            this.iconBtnLupaDetalleUser.Size = new System.Drawing.Size(64, 52);
             this.iconBtnLupaDetalleUser.TabIndex = 14;
             this.iconBtnLupaDetalleUser.UseVisualStyleBackColor = false;
             // 
             // dgvDetalleCliente
             // 
+            this.dgvDetalleCliente.AllowUserToAddRows = false;
+            this.dgvDetalleCliente.AllowUserToDeleteRows = false;
             this.dgvDetalleCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetalleCliente.BackgroundColor = System.Drawing.Color.White;
             this.dgvDetalleCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numDocumento,
-            this.nombreCompleto,
+            this.nombreCliente,
+            this.apellidoCliente,
             this.telefono,
+            this.domicilioCliente,
             this.estado});
-            this.dgvDetalleCliente.Location = new System.Drawing.Point(12, 110);
+            this.dgvDetalleCliente.Location = new System.Drawing.Point(12, 159);
             this.dgvDetalleCliente.Name = "dgvDetalleCliente";
+            this.dgvDetalleCliente.ReadOnly = true;
             this.dgvDetalleCliente.RowHeadersVisible = false;
-            this.dgvDetalleCliente.Size = new System.Drawing.Size(952, 399);
+            this.dgvDetalleCliente.Size = new System.Drawing.Size(952, 350);
             this.dgvDetalleCliente.TabIndex = 13;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(26, 134);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(144, 19);
+            this.textBox1.TabIndex = 25;
+            // 
+            // lblBuscarPOrDNI
+            // 
+            this.lblBuscarPOrDNI.AutoSize = true;
+            this.lblBuscarPOrDNI.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarPOrDNI.Location = new System.Drawing.Point(23, 118);
+            this.lblBuscarPOrDNI.Name = "lblBuscarPOrDNI";
+            this.lblBuscarPOrDNI.Size = new System.Drawing.Size(93, 17);
+            this.lblBuscarPOrDNI.TabIndex = 24;
+            this.lblBuscarPOrDNI.Text = "Buscar por DNI:";
             // 
             // numDocumento
             // 
             this.numDocumento.HeaderText = "Documento";
             this.numDocumento.Name = "numDocumento";
+            this.numDocumento.ReadOnly = true;
             // 
-            // nombreCompleto
+            // nombreCliente
             // 
-            this.nombreCompleto.HeaderText = "Nombre completo";
-            this.nombreCompleto.Name = "nombreCompleto";
+            this.nombreCliente.HeaderText = "Nombre ";
+            this.nombreCliente.Name = "nombreCliente";
+            this.nombreCliente.ReadOnly = true;
+            // 
+            // apellidoCliente
+            // 
+            this.apellidoCliente.HeaderText = "Apellido";
+            this.apellidoCliente.Name = "apellidoCliente";
+            this.apellidoCliente.ReadOnly = true;
             // 
             // telefono
             // 
             this.telefono.HeaderText = "Telefono";
             this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // domicilioCliente
+            // 
+            this.domicilioCliente.HeaderText = "Domicilio";
+            this.domicilioCliente.Name = "domicilioCliente";
+            this.domicilioCliente.ReadOnly = true;
             // 
             // estado
             // 
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             // 
             // frmClienteDetalle
             // 
@@ -167,6 +210,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(960, 538);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblBuscarPOrDNI);
             this.Controls.Add(this.lblTotalClienteRegistrados);
             this.Controls.Add(this.lblClienteRegistrados);
             this.Controls.Add(this.cbFiltrarEstadoCliente);
@@ -196,9 +241,13 @@
         private System.Windows.Forms.Label lblClientesReegistrados;
         private FontAwesome.Sharp.IconButton iconBtnLupaDetalleUser;
         private System.Windows.Forms.DataGridView dgvDetalleCliente;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblBuscarPOrDNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn numDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompleto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn domicilioCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }

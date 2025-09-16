@@ -111,14 +111,14 @@
             // tsmiAltaCliente
             // 
             this.tsmiAltaCliente.Name = "tsmiAltaCliente";
-            this.tsmiAltaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAltaCliente.Size = new System.Drawing.Size(177, 22);
             this.tsmiAltaCliente.Text = "Registrar cliente";
             this.tsmiAltaCliente.Click += new System.EventHandler(this.tsmiAltaCliente_Click);
             // 
             // tsmiListarCliente
             // 
             this.tsmiListarCliente.Name = "tsmiListarCliente";
-            this.tsmiListarCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiListarCliente.Size = new System.Drawing.Size(177, 22);
             this.tsmiListarCliente.Text = "Consultar cliente";
             this.tsmiListarCliente.Click += new System.EventHandler(this.tsmiListarCliente_Click);
             // 
@@ -142,6 +142,7 @@
             this.tsmiConsultarProd.Name = "tsmiConsultarProd";
             this.tsmiConsultarProd.Size = new System.Drawing.Size(194, 22);
             this.tsmiConsultarProd.Text = "Consultar producto";
+            this.tsmiConsultarProd.Click += new System.EventHandler(this.tsmiConsultarProd_Click);
             // 
             // pntCabecera
             // 

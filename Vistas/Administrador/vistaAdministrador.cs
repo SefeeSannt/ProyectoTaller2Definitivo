@@ -93,8 +93,12 @@ namespace CapaPresentacion.Vistas.Administrador
             }
         }
 
+        private void iconBtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        private void tsmiAltaUsuario_Click(object sender, EventArgs e)
+        private void tsmiAltaUsuario_Click_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
@@ -107,7 +111,7 @@ namespace CapaPresentacion.Vistas.Administrador
             frm.Show();
         }
 
-        private void tsmiListarUsuarios_Click(object sender, EventArgs e)
+        private void tsmiListarUsuarios_Click_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
@@ -118,11 +122,6 @@ namespace CapaPresentacion.Vistas.Administrador
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
             frm.Show();
-        }
-
-        private void iconBtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

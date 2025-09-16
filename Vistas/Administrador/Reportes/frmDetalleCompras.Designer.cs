@@ -31,21 +31,11 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBuscarReportes = new System.Windows.Forms.TextBox();
             this.cboBuscarReporte = new System.Windows.Forms.ComboBox();
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.dgvReporteCompras = new System.Windows.Forms.DataGridView();
-            this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.montoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.docProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.cboBuscarProveedor = new System.Windows.Forms.ComboBox();
             this.lblProveedor = new System.Windows.Forms.Label();
@@ -57,13 +47,20 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             this.label1 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteCompras)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscarReportes
             // 
-            this.txtBuscarReportes.Location = new System.Drawing.Point(620, 130);
+            this.txtBuscarReportes.Location = new System.Drawing.Point(766, 125);
             this.txtBuscarReportes.Name = "txtBuscarReportes";
             this.txtBuscarReportes.Size = new System.Drawing.Size(152, 20);
             this.txtBuscarReportes.TabIndex = 29;
@@ -71,7 +68,7 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             // cboBuscarReporte
             // 
             this.cboBuscarReporte.FormattingEnabled = true;
-            this.cboBuscarReporte.Location = new System.Drawing.Point(493, 130);
+            this.cboBuscarReporte.Location = new System.Drawing.Point(639, 125);
             this.cboBuscarReporte.Name = "cboBuscarReporte";
             this.cboBuscarReporte.Size = new System.Drawing.Size(121, 21);
             this.cboBuscarReporte.TabIndex = 28;
@@ -82,7 +79,7 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             this.labelBuscarPor.BackColor = System.Drawing.Color.White;
             this.labelBuscarPor.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscarPor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelBuscarPor.Location = new System.Drawing.Point(426, 138);
+            this.labelBuscarPor.Location = new System.Drawing.Point(572, 133);
             this.labelBuscarPor.Name = "labelBuscarPor";
             this.labelBuscarPor.Size = new System.Drawing.Size(62, 15);
             this.labelBuscarPor.TabIndex = 27;
@@ -94,20 +91,18 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             this.dgvReporteCompras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReporteCompras.BackgroundColor = System.Drawing.Color.White;
             this.dgvReporteCompras.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReporteCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReporteCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReporteCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReporteCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fechaRegistro,
-            this.tipoDoc,
             this.NroDocumento,
-            this.montoTotal,
             this.usuarioRegistro,
             this.docProveedor,
             this.codigoProducto,
@@ -116,58 +111,9 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             this.precioCompra});
             this.dgvReporteCompras.Location = new System.Drawing.Point(11, 171);
             this.dgvReporteCompras.Name = "dgvReporteCompras";
+            this.dgvReporteCompras.RowHeadersVisible = false;
             this.dgvReporteCompras.Size = new System.Drawing.Size(937, 355);
             this.dgvReporteCompras.TabIndex = 26;
-            // 
-            // fechaRegistro
-            // 
-            this.fechaRegistro.HeaderText = "Fecha Registro";
-            this.fechaRegistro.Name = "fechaRegistro";
-            // 
-            // tipoDoc
-            // 
-            this.tipoDoc.HeaderText = "Tipo Documento";
-            this.tipoDoc.Name = "tipoDoc";
-            // 
-            // NroDocumento
-            // 
-            this.NroDocumento.HeaderText = "Nro. Documento";
-            this.NroDocumento.Name = "NroDocumento";
-            // 
-            // montoTotal
-            // 
-            this.montoTotal.HeaderText = "Monto Total";
-            this.montoTotal.Name = "montoTotal";
-            // 
-            // usuarioRegistro
-            // 
-            this.usuarioRegistro.HeaderText = "Usuario Registro";
-            this.usuarioRegistro.Name = "usuarioRegistro";
-            // 
-            // docProveedor
-            // 
-            this.docProveedor.HeaderText = "Documento Proveedor";
-            this.docProveedor.Name = "docProveedor";
-            // 
-            // codigoProducto
-            // 
-            this.codigoProducto.HeaderText = "Código Producto";
-            this.codigoProducto.Name = "codigoProducto";
-            // 
-            // nombreProducto
-            // 
-            this.nombreProducto.HeaderText = "Nombre Producto";
-            this.nombreProducto.Name = "nombreProducto";
-            // 
-            // categoria
-            // 
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            // 
-            // precioCompra
-            // 
-            this.precioCompra.HeaderText = "Precio Compra";
-            this.precioCompra.Name = "precioCompra";
             // 
             // label3
             // 
@@ -275,7 +221,7 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 18;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(778, 130);
+            this.iconButton2.Location = new System.Drawing.Point(924, 125);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(32, 21);
             this.iconButton2.TabIndex = 31;
@@ -306,22 +252,51 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             this.btnBuscarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarProveedor.UseVisualStyleBackColor = false;
             // 
-            // btnSalir
+            // fechaRegistro
             // 
-            this.btnSalir.Location = new System.Drawing.Point(873, 53);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 32;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.fechaRegistro.HeaderText = "Fecha Registro";
+            this.fechaRegistro.Name = "fechaRegistro";
+            // 
+            // NroDocumento
+            // 
+            this.NroDocumento.HeaderText = "Nro. Documento";
+            this.NroDocumento.Name = "NroDocumento";
+            // 
+            // usuarioRegistro
+            // 
+            this.usuarioRegistro.HeaderText = "Usuario Registro";
+            this.usuarioRegistro.Name = "usuarioRegistro";
+            // 
+            // docProveedor
+            // 
+            this.docProveedor.HeaderText = "Documento Proveedor";
+            this.docProveedor.Name = "docProveedor";
+            // 
+            // codigoProducto
+            // 
+            this.codigoProducto.HeaderText = "Código Producto";
+            this.codigoProducto.Name = "codigoProducto";
+            // 
+            // nombreProducto
+            // 
+            this.nombreProducto.HeaderText = "Nombre Producto";
+            this.nombreProducto.Name = "nombreProducto";
+            // 
+            // categoria
+            // 
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            // 
+            // precioCompra
+            // 
+            this.precioCompra.HeaderText = "Precio Compra";
+            this.precioCompra.Name = "precioCompra";
             // 
             // frmDetalleCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 538);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.btnBuscarProveedor);
             this.Controls.Add(this.txtBuscarReportes);
@@ -341,6 +316,7 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
             this.Name = "frmDetalleCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Formulario Compras";
+            
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteCompras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -353,16 +329,6 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
         private System.Windows.Forms.ComboBox cboBuscarReporte;
         private System.Windows.Forms.Label labelBuscarPor;
         private System.Windows.Forms.DataGridView dgvReporteCompras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn montoTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn docProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioCompra;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboBuscarProveedor;
         private System.Windows.Forms.Label lblProveedor;
@@ -374,6 +340,13 @@ namespace CapaPresentacion.Vistas.Administrador.Reportes
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton btnBuscarProveedor;
-        private Button btnSalir;
+        private DataGridViewTextBoxColumn fechaRegistro;
+        private DataGridViewTextBoxColumn NroDocumento;
+        private DataGridViewTextBoxColumn usuarioRegistro;
+        private DataGridViewTextBoxColumn docProveedor;
+        private DataGridViewTextBoxColumn codigoProducto;
+        private DataGridViewTextBoxColumn nombreProducto;
+        private DataGridViewTextBoxColumn categoria;
+        private DataGridViewTextBoxColumn precioCompra;
     }
 }

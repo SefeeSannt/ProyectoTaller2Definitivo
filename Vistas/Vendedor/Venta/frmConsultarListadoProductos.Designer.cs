@@ -1,11 +1,6 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace CapaPresentacion.Vistas.Administrador.Productos
+﻿namespace ProyectoTaller2Definitivo.Vistas.Vendedor.Venta
 {
-    partial class frmListaProductos
+    partial class frmConsultarListadoProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -53,47 +48,47 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             // cbFiltrarEstadoProducto
             // 
             this.cbFiltrarEstadoProducto.FormattingEnabled = true;
-            this.cbFiltrarEstadoProducto.Location = new System.Drawing.Point(286, 78);
+            this.cbFiltrarEstadoProducto.Location = new System.Drawing.Point(315, 71);
             this.cbFiltrarEstadoProducto.Name = "cbFiltrarEstadoProducto";
             this.cbFiltrarEstadoProducto.Size = new System.Drawing.Size(239, 21);
-            this.cbFiltrarEstadoProducto.TabIndex = 30;
+            this.cbFiltrarEstadoProducto.TabIndex = 37;
             // 
             // txtProductoBuscarPor
             // 
-            this.txtProductoBuscarPor.Location = new System.Drawing.Point(12, 80);
+            this.txtProductoBuscarPor.Location = new System.Drawing.Point(12, 73);
             this.txtProductoBuscarPor.Multiline = true;
             this.txtProductoBuscarPor.Name = "txtProductoBuscarPor";
             this.txtProductoBuscarPor.Size = new System.Drawing.Size(197, 19);
-            this.txtProductoBuscarPor.TabIndex = 29;
+            this.txtProductoBuscarPor.TabIndex = 36;
             // 
             // lblFiltroEstadoProducto
             // 
             this.lblFiltroEstadoProducto.AutoSize = true;
             this.lblFiltroEstadoProducto.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltroEstadoProducto.Location = new System.Drawing.Point(283, 61);
+            this.lblFiltroEstadoProducto.Location = new System.Drawing.Point(312, 54);
             this.lblFiltroEstadoProducto.Name = "lblFiltroEstadoProducto";
             this.lblFiltroEstadoProducto.Size = new System.Drawing.Size(43, 17);
-            this.lblFiltroEstadoProducto.TabIndex = 28;
+            this.lblFiltroEstadoProducto.TabIndex = 35;
             this.lblFiltroEstadoProducto.Text = "Filtrar:";
             // 
             // lblBuscarNombre
             // 
             this.lblBuscarNombre.AutoSize = true;
             this.lblBuscarNombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarNombre.Location = new System.Drawing.Point(9, 64);
+            this.lblBuscarNombre.Location = new System.Drawing.Point(9, 57);
             this.lblBuscarNombre.Name = "lblBuscarNombre";
             this.lblBuscarNombre.Size = new System.Drawing.Size(49, 17);
-            this.lblBuscarNombre.TabIndex = 27;
+            this.lblBuscarNombre.TabIndex = 34;
             this.lblBuscarNombre.Text = "Buscar:";
             // 
             // lblClientesReegistrados
             // 
             this.lblClientesReegistrados.AutoSize = true;
             this.lblClientesReegistrados.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientesReegistrados.Location = new System.Drawing.Point(7, 22);
+            this.lblClientesReegistrados.Location = new System.Drawing.Point(12, 9);
             this.lblClientesReegistrados.Name = "lblClientesReegistrados";
             this.lblClientesReegistrados.Size = new System.Drawing.Size(178, 26);
-            this.lblClientesReegistrados.TabIndex = 26;
+            this.lblClientesReegistrados.TabIndex = 33;
             this.lblClientesReegistrados.Text = "Lista de Productos";
             // 
             // iconBtnLupaDetalleUser
@@ -105,10 +100,10 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.iconBtnLupaDetalleUser.IconColor = System.Drawing.Color.White;
             this.iconBtnLupaDetalleUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnLupaDetalleUser.IconSize = 19;
-            this.iconBtnLupaDetalleUser.Location = new System.Drawing.Point(215, 80);
+            this.iconBtnLupaDetalleUser.Location = new System.Drawing.Point(215, 73);
             this.iconBtnLupaDetalleUser.Name = "iconBtnLupaDetalleUser";
             this.iconBtnLupaDetalleUser.Size = new System.Drawing.Size(41, 21);
-            this.iconBtnLupaDetalleUser.TabIndex = 25;
+            this.iconBtnLupaDetalleUser.TabIndex = 32;
             this.iconBtnLupaDetalleUser.UseVisualStyleBackColor = false;
             // 
             // dgvListaProductos
@@ -125,11 +120,11 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.precio,
             this.stock,
             this.eliminar});
-            this.dgvListaProductos.Location = new System.Drawing.Point(12, 115);
+            this.dgvListaProductos.Location = new System.Drawing.Point(-4, 112);
             this.dgvListaProductos.Name = "dgvListaProductos";
             this.dgvListaProductos.RowHeadersVisible = false;
-            this.dgvListaProductos.Size = new System.Drawing.Size(936, 384);
-            this.dgvListaProductos.TabIndex = 24;
+            this.dgvListaProductos.Size = new System.Drawing.Size(948, 384);
+            this.dgvListaProductos.TabIndex = 38;
             // 
             // codProducto
             // 
@@ -166,23 +161,22 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
             this.eliminar.HeaderText = "";
             this.eliminar.Name = "eliminar";
             // 
-            // frmListaProductos
+            // frmConsultarListadoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(960, 538);
+            this.ClientSize = new System.Drawing.Size(944, 499);
+            this.Controls.Add(this.dgvListaProductos);
             this.Controls.Add(this.cbFiltrarEstadoProducto);
             this.Controls.Add(this.txtProductoBuscarPor);
             this.Controls.Add(this.lblFiltroEstadoProducto);
             this.Controls.Add(this.lblBuscarNombre);
             this.Controls.Add(this.lblClientesReegistrados);
             this.Controls.Add(this.iconBtnLupaDetalleUser);
-            this.Controls.Add(this.dgvListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmListaProductos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Productos";
+            this.Name = "frmConsultarListadoProductos";
+            this.Text = "frmConsultarListadoProductos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,19 +184,20 @@ namespace CapaPresentacion.Vistas.Administrador.Productos
         }
 
         #endregion
-        private ComboBox cbFiltrarEstadoProducto;
-        private TextBox txtProductoBuscarPor;
-        private Label lblFiltroEstadoProducto;
-        private Label lblBuscarNombre;
-        private Label lblClientesReegistrados;
+
+        private System.Windows.Forms.ComboBox cbFiltrarEstadoProducto;
+        private System.Windows.Forms.TextBox txtProductoBuscarPor;
+        private System.Windows.Forms.Label lblFiltroEstadoProducto;
+        private System.Windows.Forms.Label lblBuscarNombre;
+        private System.Windows.Forms.Label lblClientesReegistrados;
         private FontAwesome.Sharp.IconButton iconBtnLupaDetalleUser;
-        private DataGridView dgvListaProductos;
-        private DataGridViewTextBoxColumn codProducto;
-        private DataGridViewTextBoxColumn nombreProducto;
-        private DataGridViewTextBoxColumn categoria;
-        private DataGridViewTextBoxColumn descripcion;
-        private DataGridViewTextBoxColumn precio;
-        private DataGridViewTextBoxColumn stock;
-        private DataGridViewButtonColumn eliminar;
+        private System.Windows.Forms.DataGridView dgvListaProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stock;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminar;
     }
 }

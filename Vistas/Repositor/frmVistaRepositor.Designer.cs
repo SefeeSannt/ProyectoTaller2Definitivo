@@ -35,6 +35,7 @@
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.tsmiComprar = new System.Windows.Forms.ToolStripMenuItem();
             this.iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
+            this.tsmAltaProveedor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiConsultarProveedores = new System.Windows.Forms.ToolStripMenuItem();
             this.pntCabecera = new System.Windows.Forms.Panel();
             this.iconBtnSalir = new FontAwesome.Sharp.IconButton();
@@ -117,6 +118,7 @@
             // iconMenuItem3
             // 
             this.iconMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAltaProveedor,
             this.tsmiConsultarProveedores});
             this.iconMenuItem3.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconMenuItem3.ForeColor = System.Drawing.Color.White;
@@ -129,6 +131,13 @@
             this.iconMenuItem3.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.iconMenuItem3.Size = new System.Drawing.Size(95, 38);
             this.iconMenuItem3.Text = "Proveedor";
+            // 
+            // tsmAltaProveedor
+            // 
+            this.tsmAltaProveedor.Name = "tsmAltaProveedor";
+            this.tsmAltaProveedor.Size = new System.Drawing.Size(214, 22);
+            this.tsmAltaProveedor.Text = "Dar alta";
+            this.tsmAltaProveedor.Click += new System.EventHandler(this.tsmAltaProveedor_Click);
             // 
             // tsmiConsultarProveedores
             // 
@@ -245,5 +254,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiConsultarProveedores;
         private System.Windows.Forms.ToolStripMenuItem tsmiConsultarCompra;
         private FontAwesome.Sharp.IconButton iconBtnSalir;
+        private System.Windows.Forms.ToolStripMenuItem tsmAltaProveedor;
     }
 }

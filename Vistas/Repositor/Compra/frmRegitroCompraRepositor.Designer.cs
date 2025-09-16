@@ -43,8 +43,6 @@
             this.iconBtnLupa = new FontAwesome.Sharp.IconButton();
             this.numUpDCantidad = new System.Windows.Forms.NumericUpDown();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.txtprecioVenta = new System.Windows.Forms.TextBox();
-            this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.lblPrecioCompra = new System.Windows.Forms.Label();
             this.txtProductos = new System.Windows.Forms.TextBox();
@@ -59,9 +57,7 @@
             this.lblNumDoc = new System.Windows.Forms.Label();
             this.lblTutulo = new System.Windows.Forms.Label();
             this.gbInfCompra = new System.Windows.Forms.GroupBox();
-            this.cbTipoDoc = new System.Windows.Forms.ComboBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.lblTipoDoc = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.errIngresoDatos = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroCompras)).BeginInit();
@@ -184,8 +180,6 @@
             this.gbInfProducto.Controls.Add(this.iconBtnLupa);
             this.gbInfProducto.Controls.Add(this.numUpDCantidad);
             this.gbInfProducto.Controls.Add(this.lblCantidad);
-            this.gbInfProducto.Controls.Add(this.txtprecioVenta);
-            this.gbInfProducto.Controls.Add(this.lblPrecioVenta);
             this.gbInfProducto.Controls.Add(this.txtPrecioCompra);
             this.gbInfProducto.Controls.Add(this.lblPrecioCompra);
             this.gbInfProducto.Controls.Add(this.txtProductos);
@@ -233,29 +227,11 @@
             this.lblCantidad.TabIndex = 8;
             this.lblCantidad.Text = "Cantidad:";
             // 
-            // txtprecioVenta
-            // 
-            this.txtprecioVenta.Location = new System.Drawing.Point(470, 58);
-            this.txtprecioVenta.Name = "txtprecioVenta";
-            this.txtprecioVenta.Size = new System.Drawing.Size(100, 22);
-            this.txtprecioVenta.TabIndex = 7;
-            this.txtprecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
-            // 
-            // lblPrecioVenta
-            // 
-            this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioVenta.Location = new System.Drawing.Point(467, 42);
-            this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(81, 17);
-            this.lblPrecioVenta.TabIndex = 6;
-            this.lblPrecioVenta.Text = "Precio Venta:";
-            // 
             // txtPrecioCompra
             // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(364, 58);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(412, 59);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecioCompra.Size = new System.Drawing.Size(133, 22);
             this.txtPrecioCompra.TabIndex = 5;
             this.txtPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
             // 
@@ -263,7 +239,7 @@
             // 
             this.lblPrecioCompra.AutoSize = true;
             this.lblPrecioCompra.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioCompra.Location = new System.Drawing.Point(361, 42);
+            this.lblPrecioCompra.Location = new System.Drawing.Point(409, 43);
             this.lblPrecioCompra.Name = "lblPrecioCompra";
             this.lblPrecioCompra.Size = new System.Drawing.Size(93, 17);
             this.lblPrecioCompra.TabIndex = 4;
@@ -273,7 +249,7 @@
             // 
             this.txtProductos.Location = new System.Drawing.Point(182, 57);
             this.txtProductos.Name = "txtProductos";
-            this.txtProductos.Size = new System.Drawing.Size(173, 22);
+            this.txtProductos.Size = new System.Drawing.Size(221, 22);
             this.txtProductos.TabIndex = 3;
             // 
             // txtCodProducto
@@ -290,9 +266,9 @@
             this.lblProductos.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductos.Location = new System.Drawing.Point(179, 37);
             this.lblProductos.Name = "lblProductos";
-            this.lblProductos.Size = new System.Drawing.Size(64, 17);
+            this.lblProductos.Size = new System.Drawing.Size(58, 17);
             this.lblProductos.TabIndex = 1;
-            this.lblProductos.Text = "Productos";
+            this.lblProductos.Text = "Producto";
             // 
             // lblCodProducto
             // 
@@ -387,9 +363,7 @@
             // 
             // gbInfCompra
             // 
-            this.gbInfCompra.Controls.Add(this.cbTipoDoc);
-            this.gbInfCompra.Controls.Add(this.txtFecha);
-            this.gbInfCompra.Controls.Add(this.lblTipoDoc);
+            this.gbInfCompra.Controls.Add(this.dateTimePicker1);
             this.gbInfCompra.Controls.Add(this.lblFecha);
             this.gbInfCompra.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfCompra.Location = new System.Drawing.Point(2, 50);
@@ -399,32 +373,12 @@
             this.gbInfCompra.TabStop = false;
             this.gbInfCompra.Text = "Información Compra";
             // 
-            // cbTipoDoc
+            // dateTimePicker1
             // 
-            this.cbTipoDoc.FormattingEnabled = true;
-            this.cbTipoDoc.Location = new System.Drawing.Point(173, 53);
-            this.cbTipoDoc.Name = "cbTipoDoc";
-            this.cbTipoDoc.Size = new System.Drawing.Size(172, 25);
-            this.cbTipoDoc.TabIndex = 3;
-            this.cbTipoDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noWrite_KeyPress);
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(19, 53);
-            this.txtFecha.Multiline = true;
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(148, 23);
-            this.txtFecha.TabIndex = 2;
-            // 
-            // lblTipoDoc
-            // 
-            this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoDoc.Location = new System.Drawing.Point(174, 35);
-            this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(102, 17);
-            this.lblTipoDoc.TabIndex = 1;
-            this.lblTipoDoc.Text = "Tipo Documento:";
+            this.dateTimePicker1.Location = new System.Drawing.Point(19, 53);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // lblFecha
             // 
@@ -487,8 +441,6 @@
         private FontAwesome.Sharp.IconButton iconBtnLupa;
         private System.Windows.Forms.NumericUpDown numUpDCantidad;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.TextBox txtprecioVenta;
-        private System.Windows.Forms.Label lblPrecioVenta;
         private System.Windows.Forms.TextBox txtPrecioCompra;
         private System.Windows.Forms.Label lblPrecioCompra;
         private System.Windows.Forms.TextBox txtProductos;
@@ -503,10 +455,8 @@
         private System.Windows.Forms.Label lblNumDoc;
         private System.Windows.Forms.Label lblTutulo;
         private System.Windows.Forms.GroupBox gbInfCompra;
-        private System.Windows.Forms.ComboBox cbTipoDoc;
-        private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.ErrorProvider errIngresoDatos;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
